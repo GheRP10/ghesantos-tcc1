@@ -1,0 +1,201 @@
+/* ==========================================================
+   ESTILOS ESPECÍFICOS PARA A PÁGINA DE DICIONARIZAÇÃO VISUAL
+========================================================== */
+
+
+/* Estilos para o card de spotlight das entidades principais */
+
+.spotlight-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+}
+
+@media (min-width: 992px) {
+    .spotlight-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+.entity-spotlight {
+    background: #fdfcff;
+    border: 1px solid rgba(148, 0, 211, 0.2);
+    border-radius: 12px;
+    padding: 1.5rem;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.spotlight-header {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    margin-bottom: 1rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid #eee;
+}
+
+.spotlight-header i {
+    font-size: 1.5rem;
+    color: var(--accent);
+}
+
+.spotlight-header h5 {
+    font-weight: 700;
+    color: var(--accent-dark);
+    margin: 0;
+}
+
+.spotlight-desc {
+    font-size: 0.9rem;
+    color: var(--neutral);
+    flex-grow: 1;
+}
+
+
+/* Lista de atributos chave */
+
+.key-attributes {
+    list-style: none;
+    padding-left: 0;
+    margin: 0;
+    font-size: 0.9rem;
+}
+
+.key-attributes li {
+    background: #f8faff;
+    border-radius: 6px;
+    padding: 0.5rem 0.8rem;
+    margin-top: 0.5rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+
+/* Badges para chaves (PK/FK) */
+
+.badge-pill {
+    display: inline-block;
+    padding: 0.3rem 0.6rem;
+    border-radius: 999px;
+    font-weight: 700;
+    font-size: 0.7rem;
+    line-height: 1;
+}
+
+.badge-pk {
+    background-color: var(--accent-dark);
+    color: white;
+}
+
+.badge-fk {
+    background-color: var(--accent-light);
+    color: white;
+}
+
+
+/* Grid para entidades de apoio */
+
+
+/* .support-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+    text-align: center;
+} */
+
+.support-item {
+    background: #f5f0fa;
+    color: var(--accent-dark);
+    padding: 1rem;
+    border-radius: 8px;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    transition: all 0.2s ease-in-out;
+}
+
+.support-item:hover {
+    background: var(--accent);
+    color: white;
+}
+
+
+/* Estilização da Grade de Descrição de Entidades (6 Colunas) */
+
+.entity-card {
+    background: rgba(255, 255, 255, 0.7);
+    border-radius: 12px;
+    padding: 1.5rem;
+    border: 1px solid rgba(148, 0, 211, 0.15);
+    transition: all 0.3s ease;
+    height: 100%;
+}
+
+.entity-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(148, 0, 211, 0.1);
+    border-color: var(--accent);
+}
+
+.entity-card h5 {
+    font-weight: 700;
+    color: var(--accent);
+    margin-bottom: 0.75rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 1.1rem;
+    /* Ajuste para caber melhor */
+}
+
+.entity-card p {
+    font-size: 0.95rem;
+    /* Ajuste para caber melhor */
+    line-height: 1.6;
+    color: var(--neutral);
+}
+
+
+/* Footer do card de entidades (VERSÃO CORRIGIDA) */
+
+.entity-footer {
+    background: #f8f5fa;
+    /* Tom de roxo mais sutil */
+    border-radius: 12px;
+    padding: 1.5rem;
+    margin-top: 2rem;
+    text-align: center;
+    border: 1px solid #e5ccf5;
+}
+
+.footer-stats {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+    /* Para telas menores */
+}
+
+.entity-footer .item {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.95rem;
+    color: var(--ink);
+}
+
+.entity-footer .item i {
+    color: var(--accent);
+    font-size: 1.1rem;
+}
+
+.entity-footer p {
+    font-size: 0.9rem;
+    color: var(--neutral);
+}

@@ -1,0 +1,323 @@
+    /* ===================================================================
+   ARQUIVO GLOBAL DE ESTILOS PARA PÁGINAS VISUAIS (VERSÃO LIMPA E CORRIGIDA)
+   - Consolida regras duplicadas.
+   - Padroniza a altura e o espaçamento dos cards.
+=================================================================== */
+    /* =====================
+   VARIÁVEIS E ESTILOS GLOBAIS
+===================== */
+    
+     :root {
+        --accent: #9400D3;
+        --accent-light: #a64dd8;
+        --accent-dark: #7b2bcf;
+        --text-dark: #1a1a1a;
+        --text-light: #fff;
+        --bg-light: #f9f7fb;
+    }
+    
+    body {
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        background: linear-gradient(135deg, var(--accent), var(--accent-dark));
+        margin: 0;
+        color: var(--text-dark);
+        font-size: 1.05rem;
+        line-height: 1.7;
+    }
+    /* =====================
+   BARRA DE NAVEGAÇÃO
+===================== */
+    
+    .navbar-darkviolet {
+        background: #1f2327;
+        border-bottom: 3px solid var(--accent);
+    }
+    
+    .navbar-brand {
+        color: var(--accent);
+        font-weight: 800;
+        letter-spacing: .5px;
+    }
+    
+    .navbar .nav-link {
+        color: #cfd8dc;
+    }
+    
+    .navbar .nav-link:hover,
+    .navbar .nav-link.active {
+        color: var(--accent);
+        font-weight: 600;
+    }
+    /* =====================
+   LAYOUT E CONTAINERS
+===================== */
+    
+    .visual-container {
+        max-width: 1120px;
+        margin: 0 auto;
+        padding: 2rem 1rem;
+    }
+    /* =====================
+   BREADCRUMB
+===================== */
+    
+    .breadcrumb-wrap {
+        background: rgba(255, 255, 255, .9);
+        border: 2px solid rgba(148, 0, 211, .35);
+        border-radius: .9rem;
+        padding: .6rem 1rem;
+        box-shadow: inset 0 3px 10px rgba(0, 0, 0, .04);
+        position: relative;
+        margin-bottom: 2rem;
+    }
+    
+    .breadcrumb {
+        margin-bottom: 0;
+    }
+    
+    .breadcrumb a {
+        color: var(--accent);
+        text-decoration: none;
+        font-weight: 500;
+    }
+    /* =====================
+   COMPONENTES REUTILIZÁVEIS
+===================== */
+    
+    .section-title {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+        color: var(--accent);
+        font-weight: 700;
+        margin-bottom: 2rem;
+        font-size: 1.5rem;
+    }
+    
+    .section-title i {
+        width: 40px;
+        height: 40px;
+        background: var(--accent);
+        color: white;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-shrink: 0;
+    }
+    /* Card principal - aparência base e padronizada */
+    
+    .visual-feature-card {
+        background: #faf6fc;
+        /* Usando o fundo mais consistente */
+        border: 2px solid #e5ccf5;
+        border-radius: 14px;
+        /* Unificando o border-radius */
+        padding: 2rem;
+        /* Padding padronizado para consistência */
+        margin-bottom: 2.5rem;
+        /* Margem unificada */
+        box-shadow: 0 8px 24px rgba(0, 0, 0, 0.06);
+        position: relative;
+        overflow: hidden;
+        /* [NOVO] Altura mínima e flex para padronizar o tamanho */
+        min-height: 220px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    /* Animação da borda superior */
+    
+    .visual-feature-card::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 4px;
+        background: linear-gradient(90deg, var(--accent), #7b2bcf);
+        animation: progress 3s ease-in-out infinite;
+    }
+    
+    @keyframes progress {
+        0% {
+            transform: translateX(-100%);
+        }
+        50% {
+            transform: translateX(0%);
+        }
+        100% {
+            transform: translateX(100%);
+        }
+    }
+    /* Cabeçalho do card (ícone e título) */
+    
+    .vfc-head {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        /* Centralizado por padrão */
+        gap: .75rem;
+        margin-bottom: 1rem;
+    }
+    
+    .vfc-icon {
+        display: grid;
+        place-items: center;
+        width: clamp(34px, 2.6vw, 44px);
+        height: clamp(34px, 2.6vw, 44px);
+        border-radius: 50%;
+        background: var(--accent);
+        color: #fff;
+        box-shadow: 0 8px 20px rgba(148, 0, 211, .25);
+    }
+    
+    .vfc-icon i {
+        font-size: 1.2rem;
+        line-height: 1;
+    }
+    
+    .vfc-title {
+        font-size: clamp(1.2rem, 1vw + 1rem, 1.8rem);
+        font-weight: 700;
+        color: var(--accent);
+        margin: 0;
+    }
+    /* Variação para o card de título no topo da página */
+    
+    .visual-feature-card.is-title {
+        padding: clamp(.9rem, 1.2vw + .4rem, 1.2rem);
+        min-height: auto;
+        /* Título não precisa de altura mínima */
+        margin-bottom: 2rem;
+    }
+    
+    .visual-feature-card.is-title .vfc-title {
+        font-size: 1.6rem;
+    }
+    
+    .visual-feature-card.is-title .vfc-icon {
+        width: clamp(32px, 2.2vw, 40px);
+        height: clamp(32px, 2.2vw, 40px);
+    }
+    /* Grid para 2 colunas em desktop e 1 em mobile */
+    
+    .grid-duo {
+        display: grid;
+        gap: 2rem;
+        grid-template-columns: 1fr;
+        /* Padrão mobile: 1 coluna */
+    }
+    
+    @media (min-width: 768px) {
+        .grid-duo {
+            grid-template-columns: 1fr 1fr;
+            /* Desktop: 2 colunas */
+        }
+    }
+    /* Grid para 3 colunas em desktop e 1 em mobile */
+    
+    .grid-trio {
+        display: grid;
+        gap: 1.5rem;
+        /* Espaçamento entre os cards */
+        grid-template-columns: 1fr;
+        /* Padrão: 1 coluna */
+    }
+    
+    @media (min-width: 992px) {
+        /* Usamos um breakpoint maior para 3 colunas */
+        .grid-trio {
+            grid-template-columns: repeat(3, 1fr);
+            /* Telas grandes: 3 colunas */
+        }
+    }
+    /* ==========================================================
+   COMPONENTE: CARD DE RESUMO (Contexto, Justificativa, etc.)
+========================================================== */
+    
+    .summary-card {
+        background: #fdfcff;
+        border-left: 6px solid var(--accent);
+        border-radius: 0 16px 16px 0;
+        /* Arredonda todas as bordas, exceto a da esquerda */
+        padding: 2rem;
+        border-top: 1px solid #f3e8ff;
+        border-right: 1px solid #f3e8ff;
+        border-bottom: 1px solid #f3e8ff;
+    }
+    
+    .summary-section:not(:last-child) {
+        margin-bottom: 2rem;
+        /* Espaçamento entre as seções */
+    }
+    
+    .summary-header {
+        display: flex;
+        align-items: center;
+        gap: 0.75rem;
+        margin-bottom: 0.75rem;
+    }
+    
+    .summary-header i {
+        font-size: 1.3rem;
+        color: var(--accent);
+    }
+    
+    .summary-header h5 {
+        font-size: 1.25rem;
+        font-weight: 700;
+        color: var(--accent-dark);
+        margin: 0;
+    }
+    
+    .summary-section p {
+        font-size: 1rem;
+        line-height: 1.7;
+        color: var(--neutral);
+        padding-left: calc(1.2rem + 0.75rem);
+        margin-bottom: 0;
+    }
+    /* =====================
+   NAVEGAÇÃO INFERIOR E FOOTER
+===================== */
+    
+    .nav-steps-visual {
+        display: flex;
+        justify-content: center;
+        gap: 1rem;
+        margin-top: 2rem;
+        flex-wrap: wrap;
+    }
+    
+    .nav-steps-visual .step-pill-visual {
+        background: #fff !important;
+        color: var(--accent) !important;
+        border: 2px solid var(--accent) !important;
+        border-radius: 999px;
+        padding: 0.8rem 1.5rem;
+        font-weight: 800;
+        text-decoration: none;
+        display: inline-flex;
+        align-items: center;
+        gap: .5rem;
+        box-shadow: 0 6px 16px rgba(148, 0, 211, .20);
+        transition: transform .15s ease, box-shadow .2s ease, background .2s ease, color .2s ease;
+    }
+    
+    .nav-steps-visual .step-pill-visual:hover {
+        background: var(--accent) !important;
+        color: #fff !important;
+        box-shadow: 0 10px 24px rgba(148, 0, 211, .32);
+        transform: translateY(-1px);
+    }
+    
+    .footer-min {
+        width: 100%;
+        background-color: #f5f0fa;
+        border-top: 2px solid rgba(148, 0, 211, 0.15);
+        font-size: 0.85rem;
+        text-align: center;
+        padding-top: 0.2rem;
+        padding-bottom: 0.2rem;
+    }

@@ -1,0 +1,404 @@
+/* ==========================================================
+   STYLES.CSS - ESTILOS GLOBAIS DAS PÁGINAS-MÃE (VERSÃO FINAL E COMPLETA)
+   ========================================================== */
+
+:root {
+    --accent: #9400D3;
+    --ink: #1f2937;
+    --ok: #15803d;
+    --neutral: #4b5563;
+}
+
+body {
+    background: linear-gradient(180deg, rgba(148, 0, 211, .95) 0%, #9400D3 45%, #5a2ea6 100%);
+    background-attachment: fixed;
+    color: var(--ink);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.text-accent {
+    color: var(--accent) !important;
+}
+
+
+/* =====================
+   COMPONENTES GERAIS
+===================== */
+
+
+/* Navbar */
+
+.navbar-darkviolet {
+    background: #1f2327;
+    border-bottom: 3px solid var(--accent);
+}
+
+.navbar-brand {
+    color: var(--accent);
+    font-weight: 800;
+    letter-spacing: .5px;
+}
+
+.navbar .nav-link {
+    color: #cfd8dc;
+}
+
+.navbar .nav-link:hover,
+.navbar .nav-link.active {
+    color: var(--accent);
+    font-weight: 600;
+}
+
+
+/* Estrutura de Conteúdo */
+
+.content-section {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+}
+
+.content-card {
+    background: #ffffff;
+    border-radius: 1rem;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, .07);
+    padding: 2rem;
+    margin-bottom: 2rem;
+}
+
+
+/* Breadcrumb e Botão Visual */
+
+.breadcrumb-wrap {
+    background: #ffffff;
+    border: 1px solid #dee2e6;
+    border-radius: .75rem;
+    padding: .75rem 1.25rem;
+    margin-bottom: 2rem;
+    position: relative;
+}
+
+.breadcrumb a {
+    color: var(--accent);
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.eye-visual {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background: var(--accent);
+    color: #fff;
+    text-decoration: none;
+    box-shadow: 0 6px 16px rgba(148, 0, 211, .25);
+    position: absolute;
+    top: 50%;
+    right: 1.25rem;
+    transform: translateY(-50%);
+}
+
+
+/* Títulos de Seção */
+
+.section-title {
+    display: flex;
+    align-items: center;
+    gap: .75rem;
+    border-left: 4px solid var(--accent);
+    padding-left: .75rem;
+    margin-bottom: 1.5rem;
+    margin-top: 2rem;
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--accent);
+}
+
+.section-title i {
+    color: var(--accent);
+    font-size: 1.4rem;
+}
+
+
+/* Callouts e Listas */
+
+.desc-callout {
+    border: 2px solid #e5ccf5;
+    background: #faf6fc;
+    border-radius: 12px;
+    padding: 1.25rem 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.desc-callout h5 {
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+    font-weight: 700;
+    color: var(--accent);
+    margin-bottom: .5rem;
+}
+
+.desc-callout h5 i {
+    color: var(--accent);
+}
+
+.desc-callout ul {
+    padding-left: 1.5rem;
+}
+
+.desc-callout li::marker {
+    color: var(--accent);
+    font-weight: bold;
+}
+
+
+/* Pílulas (tags) */
+
+.pill {
+    display: inline-block;
+    background: rgba(148, 0, 211, .10);
+    border: 1px solid rgba(148, 0, 211, .25);
+    color: #4b4b4b;
+    padding: .35rem .6rem;
+    border-radius: 999px;
+    font-size: .9rem;
+}
+
+
+/* Navegação Inferior */
+
+.nav-steps {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+    margin-top: 2rem;
+}
+
+.step-pill {
+    display: block;
+    padding: 1rem 1.25rem;
+    border: 3px solid var(--accent);
+    border-radius: 999px;
+    text-align: center;
+    text-decoration: none;
+    color: var(--accent);
+    background: #fff;
+}
+
+.step-pill:hover {
+    background: rgba(148, 0, 211, .06);
+}
+
+.step-title {
+    display: block;
+    font-weight: 700;
+}
+
+.step-sub {
+    display: block;
+}
+
+
+/* Footer */
+
+.footer-min {
+    background-color: #e9ecef;
+    border-top: 1px solid #dee2e6;
+    padding: 1.5rem 0;
+    color: var(--neutral);
+    font-size: 0.9rem;
+    text-align: center;
+}
+
+
+/* ==========================================================
+   ESTILOS ADICIONAIS NECESSÁRIOS (DE STYLESOLD.CSS)
+   ========================================================== */
+
+
+/* Seção Hero e botões da Index */
+
+.hero {
+    padding: 3rem 0 2rem;
+}
+
+.hero-card {
+    background: #fff;
+    border-radius: 1.25rem;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, .12);
+    padding: 2.25rem 1.5rem;
+    border-left: 8px solid var(--accent);
+}
+
+.btn-accent {
+    background: linear-gradient(90deg, #9400D3, #7b2bcf);
+    color: #fff;
+    border: none;
+    border-radius: 999px;
+    padding: .9rem 1.4rem;
+    font-weight: 700;
+}
+
+.btn-outline-accent {
+    background: transparent;
+    color: var(--accent);
+    border: 3px solid var(--accent);
+    border-radius: 999px;
+    padding: .8rem 1.3rem;
+    font-weight: 700;
+}
+
+
+/* Grid do Sumário da Index */
+
+.summary-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.25rem;
+}
+
+@media(min-width:992px) {
+    .summary-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+.summary-card {
+    background: #fff;
+    border-radius: 1rem;
+    padding: 1.25rem;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, .08);
+    border: 2px solid rgba(148, 0, 211, .18);
+    position: relative;
+    transition: all .2s ease-in-out;
+}
+
+.summary-card:hover {
+    box-shadow: 0 10px 22px rgba(0, 0, 0, .12);
+    transform: translateY(-2px);
+    border-color: var(--accent);
+}
+
+.summary-card .icon {
+    width: 38px;
+    height: 38px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background: rgba(148, 0, 211, .12);
+    color: var(--accent);
+    margin-right: .6rem;
+    font-size: 1rem;
+}
+
+.summary-card h3 {
+    margin: 0;
+    font-size: 1.25rem;
+}
+
+.summary-card p {
+    margin: .35rem 0 0;
+    color: #4b5563;
+}
+
+
+/* Estilos para Tabelas de Dados (Dicionarização) */
+
+.table-der thead tr {
+    background: var(--accent);
+    color: #fff;
+}
+
+.table-der thead th {
+    border-color: rgba(255, 255, 255, .25) !important;
+}
+
+.table-der tbody td,
+.table-der thead th {
+    vertical-align: middle;
+}
+
+.badge-pill {
+    border-radius: 999px;
+    font-weight: 700;
+    padding: .35rem .6rem;
+    font-size: .75rem;
+    border: 1px solid transparent;
+}
+
+.badge-sim {
+    background: #e8f5eb;
+    color: var(--ok);
+    border-color: #b7e2c2;
+}
+
+.badge-nao {
+    background: #eceff1;
+    color: var(--neutral);
+    border-color: #d1d5db;
+}
+
+.badge-pk {
+    background: #fff7e6;
+    color: #92400e;
+    border-color: #fcd34d;
+}
+
+.badge-fk {
+    background: #ecf3ff;
+    color: #1e40af;
+    border-color: #93c5fd;
+}
+
+.entity-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem
+}
+
+@media(min-width:992px) {
+    .entity-grid {
+        grid-template-columns: 1fr 1fr
+    }
+}
+
+.entity-card {
+    background: #fff;
+    border: 2px solid rgba(148, 0, 211, .25);
+    border-radius: .75rem;
+    padding: 1rem;
+    box-shadow: 0 6px 14px rgba(0, 0, 0, .06)
+}
+
+.entity-card h5 {
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+    margin: 0 0 .25rem;
+    color: #1f2937
+}
+
+.entity-card p {
+    margin: 0;
+    color: #4b5563;
+    font-size: .95rem
+}
+
+.entity-footer {
+    background: #faf5ff;
+    border: 2px dashed rgba(148, 0, 211, .35);
+    border-radius: .75rem;
+    padding: 1rem;
+    color: #4b5563
+}
+
+.entity-footer .item {
+    display: inline-flex;
+    align-items: center;
+    gap: .4rem;
+    margin-right: 1rem
+}

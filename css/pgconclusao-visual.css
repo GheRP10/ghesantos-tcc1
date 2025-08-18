@@ -1,0 +1,120 @@
+/* ==========================================================
+   ESTILOS ESPECÍFICOS PARA A PÁGINA DE CONCLUSÃO VISUAL
+========================================================== */
+
+
+/* A timeline precisa de um espaçamento superior após o novo título */
+
+.journey-timeline {
+    position: relative;
+    padding: 2rem 0;
+    max-width: 800px;
+    margin: 2rem auto 0;
+    /* Adicionada margem no topo */
+}
+
+
+/* A linha vertical da timeline */
+
+.journey-timeline::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 40px;
+    height: 100%;
+    width: 4px;
+    background: #f3e8ff;
+    border-radius: 2px;
+}
+
+
+/* Cada passo/item na jornada */
+
+.journey-step {
+    position: relative;
+    padding-left: 100px;
+    /* Espaço para o ícone e a linha */
+    margin-bottom: 3rem;
+}
+
+.journey-step:last-child {
+    margin-bottom: 0;
+}
+
+
+/* O ícone de cada passo */
+
+.journey-icon {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    /* Alinha o ícone ao meio do conteúdo */
+    transform: translateY(-50%);
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background: var(--accent);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    border: 5px solid #f3e8ff;
+    box-shadow: 0 0 0 4px var(--accent);
+}
+
+
+/* O conteúdo de cada passo (título e parágrafo) */
+
+.journey-content {
+    background: #faf6fc;
+    border-radius: 12px;
+    padding: 1.5rem;
+    border: 1px solid #e5ccf5;
+    transition: all 0.3s ease;
+}
+
+.journey-content:hover {
+    transform: translateX(10px);
+    border-color: var(--accent);
+    box-shadow: 0 10px 25px rgba(148, 0, 211, 0.1);
+}
+
+.journey-content h5 {
+    font-weight: 700;
+    color: var(--accent-dark);
+    margin-bottom: 0.5rem;
+}
+
+.journey-content p {
+    margin-bottom: 0;
+    font-size: 0.95rem;
+    line-height: 1.7;
+    color: var(--neutral);
+}
+
+
+/* Responsividade para telas menores */
+
+@media (max-width: 768px) {
+    .journey-timeline {
+        padding: 1rem 0;
+        margin-top: 1rem;
+    }
+    .journey-timeline::before {
+        left: 30px;
+        /* Aproxima a linha */
+    }
+    .journey-step {
+        padding-left: 80px;
+        /* Reduz o espaçamento */
+    }
+    .journey-icon {
+        width: 60px;
+        height: 60px;
+        font-size: 1.5rem;
+        left: 0;
+        border-width: 4px;
+        box-shadow: 0 0 0 3px var(--accent);
+    }
+}

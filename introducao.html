@@ -1,0 +1,141 @@
+<!doctype html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>1. INTRODUÇÃO — GS CELL</title>
+    <meta name="description" content="1. INTRODUÇÃO — Documentação do GS CELL">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../gheSantos_TCC/css/stylesOLD.css">
+    <link rel="stylesheet" href="../gheSantos_TCC/css/pgintroducao.css">
+    <link rel="icon" type="image/png" href="assets/gs_icon.png">
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-darkviolet">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">GS</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navContent">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+            <div id="navContent" class="collapse navbar-collapse">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Início</a></li>
+                    <li class="nav-item"><a class="nav-link" href="introducao.html">Introdução</a></li>
+                    <li class="nav-item"><a class="nav-link" href="objetivos.html">Objetivos</a></li>
+                    <li class="nav-item"><a class="nav-link" href="descricao-sistema.html">Descrição</a></li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Documentação</a>
+                        <ul class="dropdown-menu dropdown-menu-end">
+                            <li><a class="dropdown-item" href="modelagem.html">Fundamentação & Modelagem</a></li>
+                            <li><a class="dropdown-item" href="ambiente.html">Ambiente</a></li>
+                            <li><a class="dropdown-item" href="requisitos.html">Requisitos</a></li>
+                            <li><a class="dropdown-item" href="dicionarizacao.html">DER & Dicionarização</a></li>
+                            <li><a class="dropdown-item" href="diagramas.html">Diagramas</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item"><a class="nav-link" href="prototipacao.html">Prototipação</a></li>
+                    <li class="nav-item"><a class="nav-link" href="conclusao.html">Conclusão</a></li>
+                    <li class="nav-item"><a class="nav-link" href="referencias.html">Referências</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container content-section">
+
+        <div class="breadcrumb-wrap my-3">
+            <nav aria-label="breadcrumb">
+                <ol class="breadcrumb mb-0">
+                    <li class="breadcrumb-item"><a href="index.html">Início</a></li>
+                    <li class="breadcrumb-item active" aria-current="page">1. INTRODUÇÃO</li>
+                </ol>
+            </nav>
+
+            <!-- Olho roxo – Apresentação Visual (fixo no canto direito) -->
+            <a href="introducao-visual.html" class="eye-visual position-absolute top-50 end-0 translate-middle-y me-3" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Apresentação Visual" aria-label="Apresentação Visual">
+                <i class="fa-solid fa-eye"></i>
+            </a>
+        </div>
+
+        <div class="row">
+            <div class="col-lg-10 mx-auto">
+                <div class="content-card">
+                    <h1 class="text-center mb-4"><i class="fa-solid fa-circle-info text-accent me-3"></i> 1. INTRODUÇÃO</h1>
+                    <!-- Card 1 — Sistema de Gestão de Ordem de Serviço — GS CELL -->
+                    <div class="feature-card">
+                        <div class="fc-head">
+                            <div class="fc-icon"><i class="fa-solid fa-mobile-screen-button"></i></div>
+                            <h5>Sistema de Gestão de Ordem de Serviço — GS CELL</h5>
+                        </div>
+                        <p>Com o crescimento constante do uso de smartphones, cresceu também a procura por serviços de assistência técnica especializada.</p>
+                        <p>Este trabalho apresenta o desenvolvimento do GS CELL, um sistema de gestão de ordens de serviço criado especificamente para atender às necessidades de pequenas lojas de conserto de smartphones. O sistema será desenvolvido utilizando
+                            <strong>C#, ASP.NET e SQL Server</strong>, priorizando simplicidade, funcionalidade e custo acessível, características essenciais para pequenos empreendedores.</p>
+                        <p>A proposta surge da necessidade de digitalizar e organizar processos operacionais que, muitas vezes, ainda são conduzidos de forma manual e pouco eficiente, incompatíveis com as exigências atuais do mercado. Para garantir organização
+                            do código, facilidade de manutenção e escalabilidade, o GS CELL será estruturado em camadas (apresentação, lógica de negócio e acesso a dados).</p>
+                    </div>
+
+                    <!-- Card 2 — Funcionalidades Principais -->
+                    <div class="feature-card">
+                        <div class="fc-head">
+                            <div class="fc-icon"><i class="fa-solid fa-list-check"></i></div>
+                            <h5>Funcionalidades Principais</h5>
+                        </div>
+                        <p>A aplicação web permitirá o cadastro de clientes em duas modalidades (simples ou completo), a criação e o gerenciamento de ordens de serviço com seis status distintos — <strong>OSO</strong> (Orçamento), <strong>OSS</strong> (Solicitada),
+                            <strong>OSA</strong> (Em Andamento), <strong>OSF</strong> (Finalizada), <strong>OSE</strong> (Entregue) e <strong>OSC</strong> (Cancelada) — além do controle de estoque com baixa automática de produtos.</p>
+                        <p>O banco de dados contará com doze entidades principais interligadas, garantindo integridade referencial e consultas eficientes.</p>
+                    </div>
+
+                    <!-- Card 3 — Funcionalidades Avançadas -->
+                    <div class="feature-card">
+                        <div class="fc-head">
+                            <div class="fc-icon"><i class="fa-solid fa-layer-group"></i></div>
+                            <h5>Funcionalidades Avançadas</h5>
+                        </div>
+                        <p>Além das funcionalidades básicas, o sistema incluirá:</p>
+                        <ul class="feature-list">
+                            <li><strong>Módulos de controle financeiro</strong> com múltiplas formas de pagamento;</li>
+                            <li><strong>Sistema de usuários</strong> com diferentes níveis de acesso;</li>
+                            <li><strong>Geração de relatórios personalizados</strong> em PDF;</li>
+                            <li><strong>Recursos de auditoria</strong> com logs de alterações;</li>
+                            <li><strong>Backup e restauração</strong> de dados;</li>
+                            <li><strong>Busca e filtros avançados</strong> para localizar informações rapidamente.</li>
+                        </ul>
+                    </div>
+
+                    <!-- Card 4 — Foco na Usabilidade -->
+                    <div class="feature-card">
+                        <div class="fc-head">
+                            <div class="fc-icon"><i class="fa-solid fa-face-smile-beam"></i></div>
+                            <h5>Foco na Usabilidade</h5>
+                        </div>
+                        <p>A interface será projetada com foco na usabilidade, permitindo que funcionários sem conhecimento técnico avançado operem o sistema com eficiência.</p>
+                        <p>Este trabalho entrega uma solução prática para pequenas assistências técnicas, substituindo processos manuais por fluxos digitais confiáveis. Ao final, espera-se demonstrar ganhos de profissionalismo no atendimento, melhor experiência
+                            do cliente e informações gerenciais precisas para o crescimento sustentável do negócio.</p>
+                    </div>
+
+
+                    <div class="nav-steps">
+                        <a class="step-pill" href="index.html">
+                            <span class="step-title"><i class="fa-solid fa-arrow-left-long me-2"></i>Anterior</span>
+                            <span class="step-sub">Início</span>
+                        </a>
+                        <a class="step-pill" href="objetivos.html">
+                            <span class="step-title">Próximo<i class="fa-solid fa-arrow-right-long ms-2"></i></span>
+                            <span class="step-sub">Objetivos</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer class="text-center text-muted py-4 footer-min">
+        <div class="container small">GS CELL — TCC | Gheizla Santos</div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

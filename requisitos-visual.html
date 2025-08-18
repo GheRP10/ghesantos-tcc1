@@ -1,0 +1,587 @@
+<!doctype html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Requisitos do Sistema — Apresentação Visual — GS CELL</title>
+    <meta name="description" content="Apresentação Visual — Requisitos do Sistema GS CELL">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../gheSantos_TCC/css/styles_global_pgvisual.css">
+    <link rel="stylesheet" href="../gheSantos_TCC/css/pgrequisitos-visual.css">
+    <link rel="icon" type="image/png" href="assets/gs_icon.png">
+</head>
+
+<body>
+    <!-- Navegação -->
+    <nav class="navbar navbar-expand-lg navbar-darkviolet">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">GS</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navContent">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+            <div id="navContent" class="collapse navbar-collapse">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Início</a></li>
+                    <li class="nav-item"><a class="nav-link" href="introducao-visual.html">Introdução</a></li>
+                    <li class="nav-item"><a class="nav-link" href="objetivos-visual.html">Objetivos</a></li>
+                    <li class="nav-item"><a class="nav-link" href="descricao-visual.html">Descrição</a></li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Documentação</a>
+                        <ul class="dropdown-menu dropdown-menu-end">
+                            <li><a class="dropdown-item" href="modelagem-visual.html">Fundamentação & Modelagem</a></li>
+                            <li><a class="dropdown-item" href="ambiente-visual.html">Ambiente</a></li>
+                            <li><a class="dropdown-item" href="requisitos-visual.html">Requisitos</a></li>
+                            <li><a class="dropdown-item" href="dicionarizacao.html">Dicionarização</a></li>
+                            <li><a class="dropdown-item" href="diagramas.html">Diagramas</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item"><a class="nav-link" href="prototipacao.html">Prototipação</a></li>
+                    <li class="nav-item"><a class="nav-link" href="conclusao-visual.html">Conclusão</a></li>
+                    <li class="nav-item"><a class="nav-link" href="referencias.html">Referências</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Breadcrumb -->
+    <div class="container visual-container">
+        <div class="breadcrumb-wrap">
+            <nav aria-label="breadcrumb">
+                <ol class="breadcrumb mb-0">
+                    <li class="breadcrumb-item"><a href="index.html">Início</a></li>
+                    <li class="breadcrumb-item active" aria-current="page">6. REQUISITOS - Apresentação Visual</li>
+                </ol>
+            </nav>
+        </div>
+
+        <!-- Card‑título -->
+        <div class="visual-feature-card is-title">
+            <div class="vfc-head">
+                <div class="vfc-icon"><i class="fa-solid fa-clipboard-list"></i></div>
+                <h2 class="vfc-title">6. REQUISITOS — Apresentação Visual</h2>
+            </div>
+        </div>
+
+        <!-- Card 1: Requisitos Funcionais Overview -->
+        <div class="visual-feature-card">
+            <div class="vfc-head">
+                <div class="vfc-icon">
+                    <i class="fa-solid fa-gear"></i>
+                </div>
+                <h2 class="vfc-title">Requisitos Funcionais</h2>
+            </div>
+
+            <div class="functional-overview">
+                <div class="row">
+                    <div class="col-md-8">
+                        <div class="system-description">
+                            <h6>Funcionalidades Essenciais</h6>
+                            <p>O sistema GS CELL implementa <strong>9 requisitos funcionais</strong> que cobrem todo o fluxo operacional de uma assistência técnica, desde o cadastro de clientes até o controle financeiro e geração de relatórios.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="rf-counter">
+                            <div class="counter-circle">
+                                <span class="counter-number">RF</span>
+                                <span class="counter-total">01-09</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Card 2: RF01 - Cadastro de Clientes -->
+        <div class="visual-feature-card">
+            <div class="vfc-head">
+                <div class="vfc-icon">
+                    <i class="fa-solid fa-user-plus"></i>
+                </div>
+                <h2 class="vfc-title">RF01 — Cadastro de Clientes</h2>
+            </div>
+
+            <div class="client-registration-visual">
+                <div class="registration-modes">
+                    <div class="mode-card simple">
+                        <div class="mode-header">
+                            <i class="fa-solid fa-bolt"></i>
+                            <h5>Cadastro Simples</h5>
+                        </div>
+                        <div class="mode-content">
+                            <div class="required-fields">
+                                <span class="field-tag required">Nome Completo</span>
+                                <span class="field-tag required">Telefone</span>
+                            </div>
+                            <div class="optional-fields">
+                                <span class="field-tag optional">Contato Referência</span>
+                            </div>
+                            <div class="mode-purpose">
+                                <i class="fa-solid fa-clock"></i>
+                                <span>Atendimento Rápido</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="mode-card complete" tabindex="0">
+                        <div class="mode-header">
+                            <i class="fa-solid fa-file-contract"></i>
+                            <h5>Cadastro Completo</h5>
+                        </div>
+                        <div class="mode-content">
+                            <div class="required-fields">
+                                <span class="field-tag required">Nome Completo</span>
+                                <span class="field-tag required">Telefone</span>
+                                <span class="field-tag required">CPF</span>
+                                <span class="field-tag required">Endereço</span>
+                                <span class="field-tag required">E-mail</span>
+                            </div>
+                            <div class="optional-fields">
+                                <span class="field-tag optional">Contato Referência</span>
+                            </div>
+                            <div class="mode-purpose">
+                                <i class="fa-solid fa-receipt"></i>
+                                <span>Documentação Fiscal</span>
+                            </div>
+                        </div>
+
+                        <div class="fiscal-note">
+                            <i class="fa-solid fa-circle-info"></i>
+                            <span>O sistema não possui módulo de emissão fiscal, sendo necessária integração externa.</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Card 3: RF02 - Ordens de Serviço -->
+        <div class="visual-feature-card">
+            <div class="vfc-head">
+                <div class="vfc-icon">
+                    <i class="fa-solid fa-file-lines"></i>
+                </div>
+                <h2 class="vfc-title">RF02 — Ordens de Serviço</h2>
+            </div>
+
+            <div class="service-order-flow">
+                <div class="flow-header">
+                    <h6>Fluxo de Status da Ordem de Serviço</h6>
+                </div>
+                <div class="status-timeline">
+                    <div class="timeline-item" data-status="OSO">
+                        <div class="timeline-badge orange">OSO</div>
+                        <div class="timeline-content">
+                            <h6>Orçamento</h6>
+                            <p>Análise inicial e cálculo de custo</p>
+                        </div>
+                    </div>
+                    <div class="timeline-connector"></div>
+                    <div class="timeline-item" data-status="OSS">
+                        <div class="timeline-badge blue">OSS</div>
+                        <div class="timeline-content">
+                            <h6>Solicitada</h6>
+                            <p>Cliente aprova e solicita o serviço</p>
+                        </div>
+                    </div>
+                    <div class="timeline-connector"></div>
+                    <div class="timeline-item" data-status="OSA">
+                        <div class="timeline-badge purple">OSA</div>
+                        <div class="timeline-content">
+                            <h6>Em Andamento</h6>
+                            <p>Técnicos executando o reparo</p>
+                        </div>
+                    </div>
+                    <div class="timeline-connector"></div>
+                    <div class="timeline-item" data-status="OSF">
+                        <div class="timeline-badge green">OSF</div>
+                        <div class="timeline-content">
+                            <h6>Finalizada</h6>
+                            <p>Conserto concluído, aguardando retirada</p>
+                        </div>
+                    </div>
+                    <div class="timeline-connector"></div>
+                    <div class="timeline-item" data-status="OSE">
+                        <div class="timeline-badge success">OSE</div>
+                        <div class="timeline-content">
+                            <h6>Entregue</h6>
+                            <p>Aparelho entregue ao cliente</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="cancelled-status">
+                    <div class="timeline-item cancelled">
+                        <div class="timeline-badge red">OSC</div>
+                        <div class="timeline-content">
+                            <h6>Cancelada</h6>
+                            <p>Serviço cancelado antes da execução</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Card 4: RF03-RF04 - Funcionários e Usuários -->
+        <div class="visual-feature-card">
+            <div class="vfc-head">
+                <div class="vfc-icon">
+                    <i class="fa-solid fa-users"></i>
+                </div>
+                <h2 class="vfc-title">RF03-RF04 — Funcionários & Usuários</h2>
+            </div>
+
+            <div class="user-management-visual">
+                <div class="user-hierarchy">
+                    <div class="hierarchy-level">
+                        <div class="level-card employee">
+                            <i class="fa-solid fa-id-badge"></i>
+                            <h6>Funcionário</h6>
+                            <div class="level-details">
+                                <span>Nome, CPF, Telefone</span>
+                                <span>Cargo, E-mail</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="hierarchy-connector">
+                        <i class="fa-solid fa-arrow-down"></i>
+                    </div>
+                    <div class="hierarchy-level">
+                        <div class="level-card user">
+                            <i class="fa-solid fa-user-shield"></i>
+                            <h6>Usuário do Sistema</h6>
+                            <div class="level-details">
+                                <span>Login: nome.sobrenome.123</span>
+                                <span>Senha Criptografada</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="access-levels">
+                    <h6>Níveis de Acesso</h6>
+                    <div class="access-grid">
+                        <div class="access-card admin">
+                            <i class="fa-solid fa-crown"></i>
+                            <span>Administrador</span>
+                        </div>
+                        <div class="access-card manager">
+                            <i class="fa-solid fa-user-tie"></i>
+                            <span>Gerente</span>
+                        </div>
+                        <div class="access-card tech">
+                            <i class="fa-solid fa-screwdriver-wrench"></i>
+                            <span>Técnico</span>
+                        </div>
+                        <div class="access-card attendant">
+                            <i class="fa-solid fa-headset"></i>
+                            <span>Atendente</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Card 5: RF05-RF06 - Produtos -->
+        <div class="visual-feature-card">
+            <div class="vfc-head">
+                <div class="vfc-icon">
+                    <i class="fa-solid fa-boxes-stacked"></i>
+                </div>
+                <h2 class="vfc-title">RF05-RF06 — Gestão de Produtos</h2>
+            </div>
+
+            <div class="product-management">
+                <div class="product-categories">
+                    <div class="category-card">
+                        <div class="category-icon">
+                            <i class="fa-solid fa-mobile-screen"></i>
+                        </div>
+                        <h6>Telas</h6>
+                        <div class="category-details">
+                            <span class="unit-badge">UN</span>
+                            <span class="cost-info">Custo • Venda</span>
+                        </div>
+                    </div>
+                    <div class="category-card">
+                        <div class="category-icon">
+                            <i class="fa-solid fa-battery-half"></i>
+                        </div>
+                        <h6>Baterias</h6>
+                        <div class="category-details">
+                            <span class="unit-badge">PC</span>
+                            <span class="cost-info">Estoque</span>
+                        </div>
+                    </div>
+                    <div class="category-card">
+                        <div class="category-icon">
+                            <i class="fa-solid fa-plug"></i>
+                        </div>
+                        <h6>Acessórios</h6>
+                        <div class="category-details">
+                            <span class="unit-badge">CX</span>
+                            <span class="cost-info">Quantidade</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="inventory-control">
+                    <h6>Controle de Estoque</h6>
+                    <div class="control-flow">
+                        <div class="control-step">
+                            <i class="fa-solid fa-box"></i>
+                            <span>Cadastro</span>
+                        </div>
+                        <i class="fa-solid fa-arrow-right"></i>
+                        <div class="control-step">
+                            <i class="fa-solid fa-link"></i>
+                            <span>Vinculação à OS</span>
+                        </div>
+                        <i class="fa-solid fa-arrow-right"></i>
+                        <div class="control-step">
+                            <i class="fa-solid fa-chart-line"></i>
+                            <span>Atualização Automática</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Card 6: RF07-RF08-RF09 - Sistema Complementar -->
+        <div class="visual-feature-card">
+            <div class="vfc-head">
+                <div class="vfc-icon">
+                    <i class="fa-solid fa-puzzle-piece"></i>
+                </div>
+                <h2 class="vfc-title">RF07-RF09 — Funcionalidades Complementares</h2>
+            </div>
+
+            <div class="complementary-features">
+                <div class="feature-trio">
+                    <div class="trio-card financial">
+                        <div class="trio-icon">
+                            <i class="fa-solid fa-sack-dollar"></i>
+                        </div>
+                        <h6>RF07 - Controle Financeiro</h6>
+                        <div class="trio-details">
+                            <span class="detail-item">Orçamentos</span>
+                            <span class="detail-item">Adiantamentos</span>
+                            <span class="detail-item">Pagamentos</span>
+                            <span class="detail-item">Formas de Pagamento</span>
+                        </div>
+                    </div>
+
+                    <div class="trio-card devices">
+                        <div class="trio-icon">
+                            <i class="fa-solid fa-mobile-screen-button"></i>
+                        </div>
+                        <h6>RF08 - Cadastro de Aparelhos</h6>
+                        <div class="trio-details">
+                            <span class="detail-item">Marca & Modelo</span>
+                            <span class="detail-item">Tipo de Dispositivo</span>
+                            <span class="detail-item">Observações</span>
+                            <span class="detail-item">Vínculo à OS</span>
+                        </div>
+                    </div>
+
+                    <div class="trio-card logging">
+                        <div class="trio-icon">
+                            <i class="fa-solid fa-clock-rotate-left"></i>
+                        </div>
+                        <h6>RF09 - Log do Sistema</h6>
+                        <div class="trio-details">
+                            <span class="detail-item">Histórico de Operações</span>
+                            <span class="detail-item">Data & Hora</span>
+                            <span class="detail-item">Usuário Responsável</span>
+                            <span class="detail-item">Tipo de Ação</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Card 7: Requisitos Não Funcionais -->
+        <div class="visual-feature-card">
+            <div class="vfc-head">
+                <div class="vfc-icon">
+                    <i class="fa-solid fa-sliders"></i>
+                </div>
+                <h2 class="vfc-title">Requisitos Não Funcionais</h2>
+            </div>
+
+            <div class="nfr-overview">
+                <div class="nfr-intro">
+                    <p>Qualidades e restrições que garantem <strong>desempenho</strong>, <strong>segurança</strong> e <strong>manutenibilidade</strong> do sistema.</p>
+                </div>
+
+                <div class="nfr-grid">
+                    <div class="nfr-category performance">
+                        <div class="category-header">
+                            <i class="fa-solid fa-gauge-high"></i>
+                            <h6>Performance</h6>
+                        </div>
+                        <div class="nfr-items">
+                            <div class="nfr-item">
+                                <span class="nfr-code">RNF02</span>
+                                <span class="nfr-desc">Resposta ≤ 3s</span>
+                            </div>
+                            <div class="nfr-item">
+                                <span class="nfr-code">RNF03</span>
+                                <span class="nfr-desc">99% Disponibilidade</span>
+                            </div>
+                            <div class="nfr-item">
+                                <span class="nfr-code">RNF05</span>
+                                <span class="nfr-desc">Escalabilidade</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="nfr-category security">
+                        <div class="category-header">
+                            <i class="fa-solid fa-shield-halved"></i>
+                            <h6>Segurança</h6>
+                        </div>
+                        <div class="nfr-items">
+                            <div class="nfr-item">
+                                <span class="nfr-code">RNF04</span>
+                                <span class="nfr-desc">Autenticação Segura</span>
+                            </div>
+                            <div class="nfr-item">
+                                <span class="nfr-code">RNF12</span>
+                                <span class="nfr-desc">Log de Alterações</span>
+                            </div>
+                            <div class="nfr-item">
+                                <span class="nfr-code">RNF14</span>
+                                <span class="nfr-desc">Backup & Restore</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="nfr-category usability">
+                        <div class="category-header">
+                            <i class="fa-solid fa-face-smile"></i>
+                            <h6>Usabilidade</h6>
+                        </div>
+                        <div class="nfr-items">
+                            <div class="nfr-item">
+                                <span class="nfr-code">RNF01</span>
+                                <span class="nfr-desc">Interface Intuitiva</span>
+                            </div>
+                            <div class="nfr-item">
+                                <span class="nfr-code">RNF06</span>
+                                <span class="nfr-desc">Multi-browser</span>
+                            </div>
+                            <div class="nfr-item">
+                                <span class="nfr-code">RNF13</span>
+                                <span class="nfr-desc">Busca Avançada</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="nfr-category compatibility">
+                        <div class="category-header">
+                            <i class="fa-solid fa-puzzle-piece"></i>
+                            <h6>Compatibilidade</h6>
+                        </div>
+                        <div class="nfr-items">
+                            <div class="nfr-item">
+                                <span class="nfr-code">RNF07</span>
+                                <span class="nfr-desc">Manutenibilidade</span>
+                            </div>
+                            <div class="nfr-item">
+                                <span class="nfr-code">RNF08</span>
+                                <span class="nfr-desc">Impressoras Térmicas</span>
+                            </div>
+                            <div class="nfr-item">
+                                <span class="nfr-code">RNF09</span>
+                                <span class="nfr-desc">Relatórios PDF</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Card Final: Resumo -->
+        <div class="visual-feature-card">
+            <div class="vfc-head">
+                <div class="vfc-icon">
+                    <i class="fa-solid fa-check-circle"></i>
+                </div>
+                <h2 class="vfc-title">Resumo dos Requisitos</h2>
+            </div>
+
+            <div class="requirements-summary">
+                <div class="summary-stats">
+                    <div class="stat-card functional">
+                        <div class="stat-number">9</div>
+                        <div class="stat-label">Requisitos Funcionais</div>
+                        <div class="stat-description">Funcionalidades do sistema</div>
+                    </div>
+                    <div class="stat-card non-functional">
+                        <div class="stat-number">14</div>
+                        <div class="stat-label">Requisitos Não Funcionais</div>
+                        <div class="stat-description">Qualidades e restrições</div>
+                    </div>
+                    <div class="stat-card total">
+                        <div class="stat-number">23</div>
+                        <div class="stat-label">Total de Requisitos</div>
+                        <div class="stat-description">Especificação completa</div>
+                    </div>
+                </div>
+
+                <div class="summary-coverage">
+                    <h6>Cobertura do Sistema</h6>
+                    <div class="coverage-areas grid-trio">
+                        <div class="coverage-item">
+                            <i class="fa-solid fa-users"></i>
+                            <span>Gestão de Clientes</span>
+                        </div>
+                        <div class="coverage-item">
+                            <i class="fa-solid fa-file-lines"></i>
+                            <span>Ordens de Serviço</span>
+                        </div>
+                        <div class="coverage-item">
+                            <i class="fa-solid fa-boxes-stacked"></i>
+                            <span>Controle de Estoque</span>
+                        </div>
+                        <div class="coverage-item">
+                            <i class="fa-solid fa-sack-dollar"></i>
+                            <span>Gestão Financeira</span>
+                        </div>
+                        <div class="coverage-item">
+                            <i class="fa-solid fa-chart-line"></i>
+                            <span>Relatórios</span>
+                        </div>
+                        <div class="coverage-item">
+                            <i class="fa-solid fa-shield-halved"></i>
+                            <span>Segurança</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Navegação (Anterior / Próximo) -->
+            <div class="nav-steps-visual text-center mt-4">
+                <a class="step-pill-visual" href="ambiente-visual.html">
+                    <span class="step-title-visual"><i class="fa-solid fa-arrow-left-long"></i> Anterior</span>
+                    <span class="step-sub-visual">Ambiente</span>
+                </a>
+                <a class="step-pill-visual" href="dicionarizacao-visual.html">
+                    <span class="step-title-visual">Próximo <i class="fa-solid fa-arrow-right-long"></i></span>
+                    <span class="step-sub-visual">Dicionarização</span>
+                </a>
+            </div>
+        </div>
+    </div>
+    </div>
+    </div>
+
+    <footer class="text-center text-muted py-4 footer-min">
+        <div class="container small">GS CELL — TCC | Gheizla Santos</div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

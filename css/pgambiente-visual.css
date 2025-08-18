@@ -1,0 +1,584 @@
+/* ==========================================================
+   ESTILOS GERAIS DA PÁGINA (BASE)
+   ========================================================== */
+
+:root {
+    --accent: #9400D3;
+    --accent-light: #a64dd8;
+    --accent-dark: #7b2bcf;
+    --ink: #1f2937;
+    --neutral: #4b5563;
+}
+
+body {
+    background: linear-gradient(180deg, rgba(148, 0, 211, .95) 0%, #9400D3 45%, #5a2ea6 100%);
+    background-attachment: fixed;
+    color: var(--ink);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.text-accent {
+    color: var(--accent) !important;
+}
+
+
+/* ==========================================================
+   ESTRUTURA DOS CARDS DA PÁGINA
+   ========================================================== */
+
+.visual-feature-card {
+    border: 2px solid #e5ccf5;
+    background: #faf6fc;
+    border-radius: 14px;
+    padding: 2rem 1.5rem;
+    margin-bottom: 3rem;
+    position: relative;
+    overflow: hidden;
+}
+
+.visual-feature-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, var(--accent), #7b2bcf);
+    animation: progress 3s ease-in-out infinite;
+}
+
+.vfc-head {
+    display: flex;
+    align-items: center;
+    gap: .8rem;
+    margin-bottom: 2rem;
+    justify-content: center;
+}
+
+.vfc-icon {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+    background: linear-gradient(135deg, var(--accent), #7b2bcf);
+    color: white;
+    font-size: 1.8rem;
+    box-shadow: 0 10px 25px rgba(148, 0, 211, .3);
+    animation: pulse 2s ease-in-out infinite;
+}
+
+.vfc-title {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: var(--accent);
+    margin: 0;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+
+/* ==========================================================
+   CARD 1: AMBIENTE IDEAL
+   ========================================================== */
+
+.ideal-environment {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+}
+
+.infrastructure-visual {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1.5rem;
+}
+
+.infra-item {
+    background: white;
+    border-radius: 12px;
+    padding: 2rem 1.5rem;
+    text-align: center;
+    transition: all 0.3s ease;
+    border: 2px solid transparent;
+}
+
+.infra-item:hover {
+    transform: translateY(-5px);
+    border-color: var(--accent);
+    box-shadow: 0 10px 20px rgba(148, 0, 211, 0.15);
+}
+
+.infra-icon {
+    width: 60px;
+    height: 60px;
+    background: var(--accent);
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 1rem;
+    font-size: 1.5rem;
+}
+
+.infra-item h6 {
+    color: var(--accent);
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+
+
+/* --- Seção de Features "Could Have" --- */
+
+.features-showcase {
+    background: rgba(255, 255, 255, 0.7);
+    padding: 2rem;
+    border-radius: 15px;
+    border: 2px dashed rgba(148, 0, 211, 0.3);
+}
+
+.features-showcase h5 {
+    color: var(--accent);
+    font-weight: 700;
+    font-size: 1.5rem;
+    text-align: center;
+}
+
+.advanced-features-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 1rem;
+    margin-top: 2rem;
+}
+
+.feature-box {
+    background: white;
+    border-radius: 25px;
+    padding: 0.8rem 1.2rem;
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    font-weight: 500;
+    font-size: 0.95rem;
+    color: var(--accent-dark);
+    transition: all 0.3s ease;
+    border: 2px solid rgba(148, 0, 211, 0.2);
+}
+
+.feature-box:hover {
+    transform: translateY(-4px);
+    border-color: var(--accent);
+    box-shadow: 0 8px 18px rgba(148, 0, 211, 0.12);
+}
+
+.feature-box i {
+    font-size: 1.1rem;
+    color: var(--accent);
+}
+
+
+/* ==========================================================
+   CARD 2: AMBIENTE PROPOSTO
+   ========================================================== */
+
+.proposed-environment {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.system-description {
+    background: rgba(255, 255, 255, 0.7);
+    border-radius: 12px;
+    padding: 2rem;
+    border-left: 6px solid var(--accent);
+}
+
+.system-description h6 {
+    color: var(--accent);
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+
+.system-description p {
+    margin: 0;
+    text-align: justify;
+}
+
+.environment-sections {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.env-section {
+    background: rgba(255, 255, 255, 0.8);
+    border-radius: 14px;
+    padding: 2rem;
+    border: 2px solid rgba(148, 0, 211, 0.2);
+}
+
+.env-section h5 {
+    color: var(--accent);
+    font-weight: 700;
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+
+/* --- Infraestrutura Simplificada --- */
+
+.infra-simple-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+}
+
+.simple-item {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 12px;
+    padding: 1.5rem;
+    border: 2px solid rgba(148, 0, 211, 0.1);
+    transition: all 0.3s ease;
+}
+
+.simple-item:hover {
+    transform: translateX(10px);
+    border-color: var(--accent);
+    box-shadow: 0 8px 20px rgba(148, 0, 211, 0.1);
+}
+
+.simple-icon {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 1.5rem;
+    flex-shrink: 0;
+}
+
+.simple-icon.azure {
+    background: linear-gradient(135deg, var(--accent), var(--accent-dark));
+}
+
+.simple-icon.database {
+    background: linear-gradient(135deg, var(--accent-dark), #5a2ea6);
+}
+
+.simple-icon.web {
+    background: linear-gradient(135deg, var(--accent-light), var(--accent));
+}
+
+.simple-item h6 {
+    color: var(--accent-dark);
+    font-weight: 600;
+    margin: 0 0 0.25rem 0;
+}
+
+.simple-item p {
+    color: var(--neutral);
+    margin: 0;
+    font-size: 0.9rem;
+}
+
+
+/* --- Fluxo de Funcionalidades --- */
+
+.main-functions-flow {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-bottom: 2.5rem;
+}
+
+.function-step {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    flex: 1;
+    min-width: 150px;
+}
+
+.step-number {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, var(--accent), #7b2bcf);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+    animation: bounce 2s ease-in-out infinite;
+}
+
+.function-step:nth-of-type(2) .step-number {
+    animation-delay: 0.4s;
+}
+
+.function-step:nth-of-type(3) .step-number {
+    animation-delay: 0.8s;
+}
+
+.function-step:nth-of-type(4) .step-number {
+    animation-delay: 1.2s;
+}
+
+.step-content i {
+    font-size: 1.8rem;
+    color: var(--accent);
+    margin-bottom: 0.5rem;
+}
+
+.step-content h6 {
+    color: var(--accent);
+    font-weight: 600;
+}
+
+.step-content p {
+    color: var(--neutral);
+    font-size: 0.9rem;
+}
+
+.flow-arrow {
+    font-size: 1.8rem;
+    color: var(--accent);
+    margin-top: 50px;
+}
+
+.additional-features {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: center;
+    margin-top: 1rem;
+}
+
+.add-feature {
+    background: rgba(255, 255, 255, 0.9);
+    border: 2px solid rgba(148, 0, 211, 0.2);
+    border-radius: 25px;
+    padding: 0.8rem 1.2rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    transition: all 0.3s ease;
+}
+
+.add-feature:hover {
+    border-color: var(--accent);
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(148, 0, 211, 0.15);
+}
+
+.add-feature i {
+    color: var(--accent);
+}
+
+.add-feature span {
+    color: var(--ink);
+    font-weight: 600;
+    font-size: 0.9rem;
+}
+
+
+/* --- Comparação Visual --- */
+
+.comparison-grid {
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    gap: 1.5rem;
+    margin-top: 2rem;
+    flex-wrap: wrap;
+}
+
+.comparison-card {
+    flex: 1;
+    min-width: 280px;
+    max-width: 320px;
+    background: white;
+    border-radius: 16px;
+    padding: 2rem;
+    text-align: center;
+    border: 3px solid transparent;
+    transition: all 0.3s ease;
+    display: flex;
+    flex-direction: column;
+}
+
+.comparison-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+}
+
+.comparison-card.ideal {
+    border-color: #ffd700;
+}
+
+.comparison-card.proposed {
+    border-color: var(--accent);
+}
+
+.comp-header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.8rem;
+    margin-bottom: 1.5rem;
+}
+
+.comp-header i {
+    font-size: 1.8rem;
+}
+
+.comp-header h6 {
+    font-weight: 700;
+    font-size: 1.2rem;
+    margin: 0;
+}
+
+.comparison-card.ideal .comp-header {
+    color: #b8860b;
+}
+
+.comparison-card.proposed .comp-header {
+    color: var(--accent);
+}
+
+.comp-features {
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+    margin-bottom: 1.5rem;
+    flex-grow: 1;
+}
+
+.comp-feature {
+    background: rgba(0, 0, 0, 0.04);
+    border-radius: 20px;
+    padding: 0.6rem 1rem;
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: var(--neutral);
+}
+
+.comp-cost {
+    font-weight: 700;
+    padding: 1rem;
+    border-radius: 12px;
+    font-size: 1.1rem;
+}
+
+.comparison-card.ideal .comp-cost {
+    background: rgba(255, 215, 0, 0.2);
+    color: #b8860b;
+}
+
+.comparison-card.proposed .comp-cost {
+    background: rgba(148, 0, 211, 0.2);
+    color: var(--accent);
+}
+
+.vs-divider {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--accent);
+    background: white;
+    border: 3px solid var(--accent);
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    align-self: center;
+}
+
+
+/* ==========================================================
+   ANIMAÇÕES
+   ========================================================== */
+
+@keyframes progress {
+    0% {
+        transform: translateX(-100%);
+    }
+    50% {
+        transform: translateX(0%);
+    }
+    100% {
+        transform: translateX(100%);
+    }
+}
+
+@keyframes pulse {
+    0%,
+    100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.05);
+    }
+}
+
+@keyframes bounce {
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-8px);
+    }
+}
+
+
+/* ==========================================================
+   PENTE FINO: AJUSTES FINAIS DE RESPONSIVIDADE
+   ========================================================== */
+
+@media (max-width: 992px) {
+    .advanced-features-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .vfc-head {
+        flex-direction: column;
+        text-align: center;
+    }
+    .main-functions-flow {
+        flex-direction: column;
+        align-items: center;
+        gap: 2.5rem;
+    }
+    .main-functions-flow .flow-arrow {
+        display: none;
+    }
+    .comparison-grid {
+        flex-direction: column;
+        align-items: center;
+        gap: 1.5rem;
+    }
+    .comparison-grid .vs-divider {
+        display: none;
+    }
+}
+
+@media (max-width: 576px) {
+    .advanced-features-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}

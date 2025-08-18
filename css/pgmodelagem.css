@@ -1,0 +1,63 @@
+/* ==========================================================
+   ESTILOS ESPECÍFICOS PARA A PÁGINA DE FUNDAMENTAÇÃO & MODELAGEM
+   ========================================================== */
+
+.feature-card {
+    border: 2px solid #e5ccf5;
+    background: #faf6fc;
+    border-radius: 14px;
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.feature-card .fc-head {
+    display: flex;
+    align-items: center;
+    gap: .75rem;
+    margin-bottom: 1rem;
+}
+
+.feature-card .fc-icon {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+    background: rgba(148, 0, 211, .12);
+    color: var(--accent);
+    font-size: 1rem;
+    flex-shrink: 0;
+}
+
+.feature-card .fc-head h5 {
+    margin: 0;
+    font-weight: 700;
+    color: var(--accent);
+    font-size: 1.3rem;
+}
+
+.feature-card blockquote {
+    font-size: 0.95rem;
+    border-left: 3px solid rgba(148, 0, 211, .3);
+    padding-left: 1rem;
+    margin: 1rem 0;
+    color: var(--neutral);
+}
+
+
+/* Estilo para subtítulos H6 */
+
+.feature-card h6 {
+    font-weight: 700;
+    color: var(--accent);
+    margin-top: 1.5rem;
+    margin-bottom: 0.75rem;
+}
+
+
+/* Estilo para listas e seus marcadores (bullet points) */
+
+.feature-card ul {
+    padding-left: 1.5rem;
+    margin-top: 0.5rem;
+}

@@ -1,0 +1,60 @@
+/* ===== Página 6 — REQUISITOS (somente ajustes locais) ===== */
+
+
+/* Cards no padrão do projeto */
+
+.desc-callout {
+    border: 2px solid #e5ccf5;
+    background: #faf6fc;
+    border-radius: 14px;
+    padding: 1rem 1.25rem;
+    margin-bottom: 1rem;
+    transition: transform .2s ease-in-out, box-shadow .2s ease-in-out;
+}
+
+.desc-callout:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 14px rgba(0, 0, 0, .08);
+}
+
+.desc-callout h5 {
+    display: flex;
+    align-items: center;
+    gap: .4rem;
+    font-weight: 700;
+    color: var(--accent, #9400D3);
+    margin-bottom: .5rem;
+}
+
+.desc-callout p {
+    margin: 0;
+    line-height: 1.6;
+}
+
+.desc-callout ul {
+    margin: .5rem 0 0 1.2rem;
+    padding-left: 1rem;
+}
+
+.desc-callout li {
+    margin-bottom: .4rem;
+    line-height: 1.5;
+}
+
+.desc-callout li::marker {
+    color: var(--accent, #9400D3);
+    font-weight: bold;
+}
+
+.desc-callout h6 {
+    color: var(--accent, #9400D3);
+}
+
+
+/* Responsivo leve */
+
+@media (max-width:576px) {
+    .desc-callout {
+        padding: .9rem 1rem;
+    }
+}

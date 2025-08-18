@@ -1,0 +1,890 @@
+/* ==========================================================
+   ESTILOS ESPECÍFICOS PARA A PÁGINA DE REQUISITOS (VERSÃO FINAL E COMPLETA)
+   - Inclui estilos para Controle de Estoque e Funcionalidades Complementares.
+   - Paleta de cores 100% harmonizada com tons de roxo.
+========================================================== */
+
+
+/* --- Card 1: Visão Geral dos Requisitos Funcionais --- */
+
+.functional-overview {
+    margin-top: 1rem;
+}
+
+.system-description {
+    background: rgba(255, 255, 255, 0.8);
+    border-radius: 12px;
+    padding: 2rem;
+    border-left: 6px solid var(--accent);
+}
+
+.system-description h6 {
+    color: var(--accent);
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+
+.rf-counter {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.counter-circle {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, var(--accent), var(--accent-dark));
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    box-shadow: 0 15px 30px rgba(148, 0, 211, .4);
+    animation: pulse 3s ease-in-out infinite;
+}
+
+.counter-number {
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+.counter-total {
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
+
+/* --- Card 2: RF01 - Cadastro de Clientes --- */
+
+.registration-modes {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+}
+
+.mode-card {
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 16px;
+    padding: 1.5rem;
+    border: 2px solid rgba(148, 0, 211, 0.2);
+    transition: all 0.3s ease;
+}
+
+.mode-card:hover {
+    transform: translateY(-8px);
+    border-color: var(--accent);
+    box-shadow: 0 20px 40px rgba(148, 0, 211, 0.15);
+}
+
+.mode-header {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.mode-header i {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 1.2rem;
+}
+
+.simple .mode-header i {
+    background: var(--accent-light);
+}
+
+.complete .mode-header i {
+    background: var(--accent-dark);
+}
+
+.mode-header h5 {
+    margin: 0;
+    font-weight: 600;
+    color: var(--ink);
+}
+
+.field-tag {
+    display: inline-block;
+    padding: 0.4rem 0.8rem;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    margin: 0.2rem;
+    border: 2px solid;
+}
+
+.field-tag.required {
+    background: rgba(148, 0, 211, 0.1);
+    color: var(--accent-dark);
+    border-color: rgba(148, 0, 211, 0.3);
+}
+
+.field-tag.optional {
+    background: #f3f4f6;
+    color: var(--neutral);
+    border-color: #e5e7eb;
+}
+
+.mode-purpose {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: rgba(148, 0, 211, 0.05);
+    padding: 0.8rem;
+    border-radius: 10px;
+    color: var(--accent);
+    font-weight: 600;
+    margin-top: 1rem;
+}
+
+
+/* ==========================================================
+   NOTA INFORMATIVA PARA O CARD DE CADASTRO COMPLETO
+========================================================== */
+
+
+/* Prepara o card para posicionar a nota dentro dele */
+
+.mode-card.complete {
+    position: relative;
+    overflow: hidden;
+    /* Garante que a nota não vaze para fora */
+}
+
+
+/* Estilo da nota informativa */
+
+.fiscal-note {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: #f3e8ff;
+    /* Um tom de roxo bem claro */
+    color: var(--accent-dark);
+    padding: 0.8rem 1rem;
+    font-size: 0.90rem;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    /* Efeito de transição */
+    transition: all 0.3s ease-in-out;
+    /* Esconde a nota por padrão */
+    opacity: 0;
+    transform: translateY(100%);
+    /* Começa totalmente para baixo */
+}
+
+.fiscal-note i {
+    font-size: 1rem;
+}
+
+
+/* Exibe a nota ao passar o mouse ou focar no card */
+
+.mode-card.complete:hover .fiscal-note,
+.mode-card.complete:focus-within .fiscal-note {
+    opacity: 1;
+    transform: translateY(0);
+    /* Sobe para a posição final */
+}
+
+
+/* --- Card 3: RF02 - Ordens de Serviço (Timeline) --- */
+
+.flow-header h6 {
+    text-align: center;
+    color: var(--accent);
+    font-weight: 600;
+    font-size: 1.2rem;
+}
+
+.status-timeline {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    margin-bottom: 2rem;
+    overflow-x: auto;
+    padding-bottom: 1rem;
+    gap: .5rem;
+}
+
+.timeline-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    flex: 1;
+    min-width: 120px;
+}
+
+.timeline-badge {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-weight: 700;
+    font-size: 0.9rem;
+    margin-bottom: 0.5rem;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+    flex-shrink: 0;
+}
+
+.timeline-badge.orange {
+    background: #d8b4fe;
+    color: var(--accent-dark);
+}
+
+.timeline-badge.blue {
+    background: #a64dd8;
+}
+
+.timeline-badge.purple {
+    background: var(--accent);
+}
+
+.timeline-badge.green {
+    background: #7b2bcf;
+}
+
+.timeline-badge.success {
+    background: #6b21a8;
+}
+
+.timeline-badge.red {
+    background: #a855f7;
+    border: 2px solid white;
+}
+
+.timeline-content h6 {
+    margin: 0 0 0.25rem 0;
+    font-weight: 600;
+}
+
+.timeline-content p {
+    margin: 0;
+    font-size: 0.85rem;
+    color: var(--neutral);
+}
+
+.timeline-connector {
+    flex-grow: 1;
+    height: 2px;
+    background: #d1d5db;
+    margin-top: 25px;
+}
+
+.cancelled-status {
+    padding-top: 1rem;
+    border-top: 2px dashed #d1d5db;
+    margin-top: 1rem;
+    display: flex;
+    justify-content: center;
+}
+
+
+/* --- Card 4: RF03-RF04 - Funcionários e Usuários --- */
+
+.user-hierarchy {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 3rem;
+}
+
+.level-card {
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 12px;
+    padding: 1.5rem;
+    text-align: center;
+    border: 2px solid;
+    width: 100%;
+    max-width: 300px;
+}
+
+.level-card.employee {
+    border-color: var(--accent-light);
+}
+
+.level-card.user {
+    border-color: var(--accent-dark);
+}
+
+.level-card.employee i {
+    color: var(--accent-light);
+}
+
+.level-card.user i {
+    color: var(--accent-dark);
+}
+
+.level-card i {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.level-card h6 {
+    margin-bottom: 1rem;
+    font-weight: 600;
+}
+
+.level-details span {
+    display: block;
+    font-size: 0.9rem;
+    color: var(--neutral);
+}
+
+.hierarchy-connector {
+    color: var(--accent);
+    font-size: 1.5rem;
+}
+
+.access-levels h6 {
+    text-align: center;
+    color: var(--accent);
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+}
+
+.access-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 1rem;
+}
+
+.access-card {
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 12px;
+    padding: 1rem;
+    text-align: center;
+    border: 2px solid;
+    transition: all 0.3s ease;
+}
+
+.access-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(148, 0, 211, 0.15);
+}
+
+.access-card.admin {
+    border-color: #6b21a8;
+}
+
+.access-card.manager {
+    border-color: var(--accent-dark);
+}
+
+.access-card.tech {
+    border-color: var(--accent);
+}
+
+.access-card.attendant {
+    border-color: var(--accent-light);
+}
+
+.access-card.admin i {
+    color: #6b21a8;
+}
+
+.access-card.manager i {
+    color: var(--accent-dark);
+}
+
+.access-card.tech i {
+    color: var(--accent);
+}
+
+.access-card.attendant i {
+    color: var(--accent-light);
+}
+
+.access-card i {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+
+/* --- Card 5: RF05-RF06 - Gestão de Produtos --- */
+
+.product-categories {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1.5rem;
+    margin-bottom: 3rem;
+}
+
+.category-card {
+    padding: 2rem 1.5rem;
+    text-align: center;
+    border-radius: 16px;
+    background: rgba(255, 255, 255, 0.9);
+    border: 2px solid rgba(148, 0, 211, 0.2);
+    transition: all 0.3s ease;
+}
+
+.category-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 40px rgba(148, 0, 211, 0.15);
+    border-color: var(--accent);
+}
+
+.category-icon {
+    width: 60px;
+    height: 60px;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--accent);
+    color: white;
+    font-size: 2rem;
+    margin: 0 auto 1.5rem;
+    animation: float 4s ease-in-out infinite;
+}
+
+@keyframes float {
+    0%,
+    100% {
+        transform: translateY(0px);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+
+/* Estilos para Controle de Estoque (com boxes) */
+
+.inventory-control h6 {
+    text-align: center;
+    color: var(--accent);
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+}
+
+.control-flow {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.control-step {
+    background: rgba(255, 255, 255, 0.8);
+    border-radius: 12px;
+    padding: 1.5rem;
+    text-align: center;
+    border: 2px solid var(--accent);
+    transition: all 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    min-width: 180px;
+    font-weight: 600;
+    color: var(--ink);
+}
+
+.control-step:hover {
+    background: rgba(250, 246, 252, 1);
+    transform: translateY(-4px);
+    box-shadow: 0 10px 20px rgba(148, 0, 211, 0.1);
+}
+
+.control-step i {
+    font-size: 1.8rem;
+    color: var(--accent);
+}
+
+.control-flow>i {
+    color: var(--accent);
+    font-size: 1.5rem;
+}
+
+
+/* Estilos para detalhes da categoria de produto */
+
+.category-details {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+    margin-top: 1rem;
+}
+
+.unit-badge {
+    background: var(--accent);
+    color: white;
+    padding: 0.4rem 0.8rem;
+    border-radius: 999px;
+    font-weight: 600;
+    font-size: 0.85rem;
+    line-height: 1.2;
+}
+
+.cost-info {
+    background-color: #f3f4f6;
+    color: var(--neutral);
+    padding: 0.4rem 0.8rem;
+    border-radius: 999px;
+    font-weight: 600;
+    font-size: 0.85rem;
+    line-height: 1.2;
+}
+
+
+/* --- Card 6: RF07-RF09 - Funcionalidades Complementares --- */
+
+.feature-trio {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+}
+
+.trio-card {
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 16px;
+    padding: 2rem;
+    text-align: center;
+    transition: all 0.3s ease;
+    border: 2px solid;
+}
+
+.trio-card.financial {
+    border-color: var(--accent);
+}
+
+.trio-card.devices {
+    border-color: var(--accent-light);
+}
+
+.trio-card.logging {
+    border-color: var(--accent-dark);
+}
+
+.trio-card.financial .trio-icon {
+    background: var(--accent);
+}
+
+.trio-card.devices .trio-icon {
+    background: var(--accent-light);
+}
+
+.trio-card.logging .trio-icon {
+    background: var(--accent-dark);
+}
+
+.trio-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 30px rgba(148, 0, 211, 0.15);
+}
+
+.trio-icon {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 1.5rem;
+    margin: 0 auto 1rem;
+}
+
+
+/* [NOVO] Estilo para a lista de detalhes (como na imagem) */
+
+.trio-details {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.5rem 1.5rem;
+    text-align: left;
+    padding: 1rem 0 0 1rem;
+    margin-top: 1rem;
+    border-top: 1px solid #eee;
+}
+
+.detail-item {
+    position: relative;
+    padding-left: 1rem;
+    font-size: 0.9rem;
+    color: var(--neutral);
+}
+
+.detail-item::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 5px;
+    bottom: 5px;
+    width: 2px;
+    background-color: var(--accent-light);
+    border-radius: 2px;
+}
+
+
+/* --- Card 7: Requisitos Não Funcionais --- */
+
+.nfr-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+}
+
+.nfr-category {
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 12px;
+    padding: 1.5rem;
+    border: 2px solid;
+}
+
+.nfr-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #f8fafc;
+    padding: 0.5rem 1rem;
+    border-radius: 8px;
+    border: 1px solid #f1f5f9;
+}
+
+.nfr-code {
+    background: var(--accent);
+    color: white;
+    padding: 0.2rem 0.6rem;
+    border-radius: 12px;
+    font-size: 0.75rem;
+    font-weight: 700;
+    line-height: 1.2;
+}
+
+.nfr-category.performance {
+    border-color: var(--accent-dark);
+}
+
+.nfr-category.security {
+    border-color: var(--accent-dark);
+}
+
+.nfr-category.usability {
+    border-color: var(--accent-light);
+}
+
+.nfr-category.compatibility {
+    border-color: var(--accent-light);
+}
+
+.performance .category-header i {
+    background: var(--accent-dark);
+}
+
+.security .category-header i {
+    background: var(--accent-dark);
+}
+
+.usability .category-header i {
+    background: var(--accent-light);
+}
+
+.compatibility .category-header i {
+    background: var(--accent-light);
+}
+
+.category-header i {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 1.2rem;
+}
+
+
+/* --- Card Final: Resumo --- */
+
+.summary-stats {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 1.5rem;
+}
+
+.stat-card {
+    border: 2px solid;
+    border-radius: 16px;
+    padding: 1rem;
+    text-align: center;
+}
+
+.stat-card.functional {
+    border-color: var(--accent);
+}
+
+.stat-card.non-functional {
+    border-color: var(--accent-light);
+}
+
+.stat-card.total {
+    border-color: var(--accent-dark);
+}
+
+.summary-coverage h6 {
+    color: var(--accent);
+    text-align: center;
+    margin: 2rem 0 1rem;
+}
+
+.coverage-item i {
+    background: var(--accent);
+    color: white;
+    border-radius: 50%;
+    padding: .5rem;
+    font-size: .8rem;
+}
+
+
+/* --- Card Final: Resumo --- */
+
+.summary-stats {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+    margin-bottom: 3rem;
+}
+
+.stat-card {
+    background: rgba(255, 255, 255, 0.8);
+    border: 2px solid;
+    border-radius: 16px;
+    padding: 1.5rem;
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+.stat-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(148, 0, 211, 0.15);
+}
+
+
+/* Cores dos cards de resumo */
+
+.stat-card.functional {
+    border-color: var(--accent);
+}
+
+.stat-card.non-functional {
+    border-color: var(--accent-light);
+}
+
+.stat-card.total {
+    border-color: var(--accent-dark);
+}
+
+.stat-number {
+    font-size: 2.5rem;
+    font-weight: 800;
+    margin-bottom: 0.5rem;
+    line-height: 1.2;
+    color: var(--accent-dark);
+}
+
+.stat-label {
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--ink);
+    margin-bottom: 0.5rem;
+}
+
+.stat-description {
+    font-size: 0.9rem;
+    color: var(--neutral);
+}
+
+.summary-coverage h6 {
+    text-align: center;
+    color: var(--accent);
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+    font-size: 1.2rem;
+}
+
+.coverage-item {
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 12px;
+    padding: 0.8rem 1rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    border: 1px solid rgba(148, 0, 211, 0.1);
+    transition: all 0.3s ease;
+}
+
+.coverage-item:hover {
+    border-color: var(--accent);
+    transform: translateX(5px);
+}
+
+.coverage-item i {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--accent);
+    color: white;
+    font-size: 1rem;
+    flex-shrink: 0;
+}
+
+.coverage-item span {
+    font-weight: 600;
+    color: var(--ink);
+}
+
+
+/* --- Responsividade Específica da Página --- */
+
+@media (max-width: 992px) {
+    .nfr-grid,
+    .summary-stats {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media (max-width: 768px) {
+    .registration-modes,
+    .nfr-grid,
+    .summary-stats,
+    .feature-trio,
+    .product-categories,
+    .trio-details {
+        grid-template-columns: 1fr;
+    }
+    .status-timeline {
+        flex-direction: column;
+        align-items: center;
+        gap: 0;
+    }
+    .timeline-connector {
+        width: 2px;
+        height: 30px;
+        margin: .5rem 0;
+        flex-grow: 0;
+    }
+}

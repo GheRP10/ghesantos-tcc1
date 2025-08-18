@@ -1,0 +1,49 @@
+.feature-card {
+    border: 2px solid #e5ccf5;
+    background: #faf6fc;
+    border-radius: 14px;
+    padding: 1rem 1.25rem;
+    margin-bottom: 1rem;
+}
+
+.feature-card .fc-head {
+    display: flex;
+    align-items: center;
+    gap: .6rem;
+    margin-bottom: .25rem;
+}
+
+.feature-card .fc-icon {
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+    background: rgba(148, 0, 211, .12);
+    color: var(--accent, #9400D3);
+    font-size: 14px;
+}
+
+.feature-card h5 {
+    margin: 0;
+    font-weight: 700;
+    color: var(--accent, #9400D3);
+}
+
+.feature-card p {
+    margin: .25rem 0 .5rem 0;
+    line-height: 1.5;
+}
+
+.feature-list {
+    margin: .25rem 0 0 0;
+    padding-left: 1.1rem;
+}
+
+.feature-list li {
+    margin: .3rem 0;
+}
+
+.feature-list strong {
+    font-weight: 700;
+}

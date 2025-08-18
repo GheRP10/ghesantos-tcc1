@@ -1,0 +1,404 @@
+/* ==========================================================
+   ESTILOS PARA A PÁGINA DE OBJETIVOS (VERSÃO DEFINITIVA E CORRIGIDA)
+   ========================================================== */
+
+
+/* Animação do Objetivo Geral (Sistema Orbital) */
+
+.goal-showcase {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 400px;
+    margin-top: 2rem;
+}
+
+.central-goal {
+    position: relative;
+    z-index: 10;
+    background: linear-gradient(135deg, #fff, #f8fafc);
+    border: 3px solid var(--accent);
+    border-radius: 20px;
+    padding: 2rem;
+    text-align: center;
+    max-width: 350px;
+    box-shadow: 0 15px 35px rgba(148, 0, 211, 0.2);
+    animation: float 4s ease-in-out infinite;
+}
+
+@keyframes float {
+    0%,
+    100% {
+        transform: translateY(0px);
+    }
+    50% {
+        transform: translateY(-15px);
+    }
+}
+
+.goal-showcase .goal-icon {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, var(--accent), #7b2bcf);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 1rem;
+    color: white;
+    font-size: 2rem;
+    animation: rotate 10s linear infinite;
+}
+
+@keyframes rotate {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.central-goal h3 {
+    color: var(--accent);
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+
+.orbit-elements {
+    position: absolute;
+    width: 600px;
+    height: 600px;
+    border: 2px dashed rgba(148, 0, 211, 0.3);
+    border-radius: 50%;
+    animation: spin 20s linear infinite;
+}
+
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.orbit-item {
+    position: absolute;
+    width: 80px;
+    height: 80px;
+    background: linear-gradient(135deg, var(--accent), #7b2bcf);
+    border-radius: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-weight: 600;
+    font-size: 0.8rem;
+    box-shadow: 0 8px 20px rgba(148, 0, 211, 0.3);
+    animation: counter-spin 20s linear infinite;
+}
+
+@keyframes counter-spin {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(-360deg);
+    }
+}
+
+.orbit-1 {
+    top: -40px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.orbit-2 {
+    right: -40px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.orbit-3 {
+    bottom: -40px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.orbit-4 {
+    left: -40px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.orbit-item i {
+    font-size: 1.2rem;
+    margin-bottom: 0.2rem;
+}
+
+
+/* Objetivos Específicos */
+
+.specific-goals-container {
+    margin-top: 2rem;
+}
+
+.goals-section {
+    margin-bottom: 3rem;
+}
+
+.goals-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+}
+
+.goal-card {
+    background: #fff;
+    border-radius: 16px;
+    padding: 1.5rem;
+    text-align: center;
+    transition: all 0.3s ease;
+    box-shadow: 0 10px 22px rgba(148, 0, 211, .12);
+    border: 2px solid #fff;
+}
+
+
+/* O card principal que contém os sub-itens */
+
+.goal-card-with-sub {
+    overflow: hidden;
+    /* Necessário para a animação de altura */
+    transition: all 0.4s ease;
+}
+
+
+/* O container dos sub-itens (ESCONDIDO POR PADRÃO) */
+
+.sub-goals {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    margin-top: 1.5rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid rgba(148, 0, 211, 0.2);
+    /* Propriedades para esconder e animar */
+    opacity: 0;
+    max-height: 0;
+    overflow: hidden;
+    transition: all 0.4s ease-in-out;
+}
+
+
+/* QUANDO PASSAR O MOUSE NO CARD PRINCIPAL, MOSTRAR OS SUB-ITENS */
+
+.goal-card-with-sub:hover .sub-goals {
+    opacity: 1;
+    max-height: 300px;
+    /* Altura suficiente para mostrar o conteúdo */
+}
+
+
+/* Opcional: faz o card principal crescer um pouco para acomodar o novo conteúdo */
+
+.goal-card-with-sub:hover {
+    padding-bottom: 2rem;
+}
+
+.goal-card:hover {
+    transform: translateY(-4px);
+    border-color: var(--accent);
+    box-shadow: 0 16px 28px rgba(148, 0, 211, .16);
+}
+
+.goal-card .goal-icon {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, var(--accent), #7b2bcf);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 1rem;
+    color: white;
+    font-size: 1.5rem;
+}
+
+.goal-card h5 {
+    color: var(--accent);
+    font-weight: 700;
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+}
+
+.goal-card p {
+    color: var(--neutral);
+    font-size: 0.9rem;
+    margin: 0;
+}
+
+
+/* === ESTILO CORRETO E SIMPLIFICADO PARA O CARD DE PRODUTOS === */
+
+
+/* O container dos sub-itens */
+
+.sub-goals {
+    display: flex;
+    flex-direction: column;
+    /* Empilha verticalmente */
+    align-items: center;
+    /* Centraliza na horizontal */
+    gap: 1rem;
+    /* Espaço entre eles */
+    margin-top: 1.5rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid rgba(148, 0, 211, 0.2);
+}
+
+
+/* O sub-item individual */
+
+.sub-goal {
+    background: #f8f5fa;
+    border-radius: 10px;
+    padding: 1rem;
+    text-align: center;
+    width: 85%;
+    /* Garante que não fiquem muito largos */
+}
+
+.sub-goal i {
+    color: var(--accent);
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+    display: block;
+}
+
+.sub-goal span {
+    font-weight: 700;
+    color: var(--accent-dark);
+    font-size: 1rem;
+    line-height: 1.2;
+    display: block;
+}
+
+.sub-goal small {
+    color: var(--neutral);
+    font-size: 0.85rem;
+    line-height: 1.2;
+    display: block;
+}
+
+
+/* Fluxo de Gestão Avançada */
+
+.management-flow {
+    display: flex;
+    align-items: stretch;
+    justify-content: center;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+    margin-top: 2rem;
+}
+
+.management-flow .goal-card {
+    flex: 1;
+    min-width: 220px;
+}
+
+.flow-arrow {
+    color: var(--accent);
+    font-size: 1.5rem;
+    align-self: center;
+}
+
+
+/* Seção de Auditoria */
+
+.audit-showcase {
+    display: flex;
+    justify-content: center;
+    margin-top: 2rem;
+}
+
+.audit-showcase .goal-card {
+    max-width: 450px;
+}
+
+.log-examples {
+    display: flex;
+    gap: 0.5rem;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 1.5rem;
+}
+
+.log-tag {
+    background: rgba(148, 0, 211, 0.1);
+    color: var(--accent-dark);
+    padding: 0.3rem 0.8rem;
+    border-radius: 15px;
+    font-size: 0.8rem;
+    font-weight: 600;
+}
+
+
+/* Cores por Categoria */
+
+.goal-card[data-category="cadastro"] .goal-icon {
+    background: linear-gradient(135deg, #8A2BE2, #9400D3);
+}
+
+.goal-card[data-category="gestao"] .goal-icon {
+    background: linear-gradient(135deg, #a64dd8, #8A2BE2);
+}
+
+.goal-card[data-category="auditoria"] .goal-icon {
+    background: linear-gradient(135deg, #7b2bcf, #5a2ea6);
+}
+
+
+/* Responsividade */
+
+@media (max-width: 768px) {
+    .orbit-elements {
+        width: 400px;
+        height: 400px;
+    }
+    .orbit-item {
+        width: 60px;
+        height: 60px;
+        font-size: 0.7rem;
+    }
+    .orbit-item i {
+        font-size: 1rem;
+    }
+    .central-goal {
+        max-width: 280px;
+        padding: 1.5rem;
+    }
+    .goals-grid {
+        grid-template-columns: 1fr;
+    }
+    .management-flow {
+        flex-direction: column;
+        gap: 1rem;
+    }
+    .flow-arrow {
+        transform: rotate(90deg);
+    }
+}
+
+@media (max-width: 480px) {
+    .orbit-elements {
+        display: none;
+    }
+    .central-goal {
+        animation: none;
+    }
+}

@@ -1,0 +1,250 @@
+<!doctype html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>4. FUNDAMENTAÇÃO & MODELOGEM — GS CELL</title>
+    <meta name="description" content="4. FUNDAMENTAÇÃO & MODELOGEM — Documentação do GS CELL">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../gheSantos_TCC/css/styles.css">
+    <link rel="stylesheet" href="../gheSantos_TCC/css/pgmodelagem.css">
+    <link rel="icon" type="image/png" href="assets/gs_icon.png">
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-darkviolet">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">GS</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navContent">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+            <div id="navContent" class="collapse navbar-collapse">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Início</a></li>
+                    <li class="nav-item"><a class="nav-link" href="introducao.html">Introdução</a></li>
+                    <li class="nav-item"><a class="nav-link" href="objetivos.html">Objetivos</a></li>
+                    <li class="nav-item"><a class="nav-link" href="descricao-sistema.html">Descrição</a></li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Documentação</a>
+                        <ul class="dropdown-menu dropdown-menu-end">
+                            <li><a class="dropdown-item" href="modelagem.html">Fundamentação & Modelagem</a></li>
+                            <li><a class="dropdown-item" href="ambiente.html">Ambiente</a></li>
+                            <li><a class="dropdown-item" href="requisitos.html">Requisitos</a></li>
+                            <li><a class="dropdown-item" href="dicionarizacao.html">DER & Dicionarização</a></li>
+                            <li><a class="dropdown-item" href="diagramas.html">Diagramas</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item"><a class="nav-link" href="prototipacao.html">Prototipação</a></li>
+                    <li class="nav-item"><a class="nav-link" href="conclusao.html">Conclusão</a></li>
+                    <li class="nav-item"><a class="nav-link" href="referencias.html">Referências</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container content-section">
+
+        <div class="breadcrumb-wrap my-3">
+            <nav aria-label="breadcrumb">
+                <ol class="breadcrumb mb-0">
+                    <li class="breadcrumb-item"><a href="index.html">Início</a></li>
+                    <li class="breadcrumb-item">Documentação</li>
+                    <li class="breadcrumb-item active" aria-current="page">4. FUNDAMENTAÇÃO & MODELOGEM</li>
+                </ol>
+            </nav>
+
+            <!-- Olho roxo – Apresentação Visual (fixo no canto direito) -->
+            <a href="modelagem-visual.html" class="eye-visual position-absolute top-50 end-0 translate-middle-y me-3" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Apresentação Visual" aria-label="Apresentação Visual">
+                <i class="fa-solid fa-eye"></i>
+            </a>
+        </div>
+
+        <div class="row">
+            <div class="col-lg-10 mx-auto">
+                <div class="content-card">
+                    <h1 class="text-center mb-4"><i class="fa-solid fa-book-open text-accent me-3"></i> 4. FUNDAMENTAÇÃO & MODELOGEM</h1>
+                    <div class="feature-card">
+                        <div class="fc-head">
+                            <div class="fc-icon"><i class="fa-solid fa-clipboard-list"></i></div>
+                            <h5>4.1 Sistemas de Gestão de Ordem de Serviço</h5>
+                        </div>
+                        <blockquote cite="FERNANDES; ABREU, 2014">
+                            A gestão de serviços tornou-se fundamental para organizações que buscam colocar em prática informações estratégicas de forma eficiente. Com a globalização dos negócios, diversos setores de serviços vêm buscando melhorias constantes, exigindo maior atenção
+                            por parte das organizações e seus colaboradores (FERNANDES; ABREU, 2014).
+                        </blockquote>
+
+                        <blockquote cite="Galvão et al., 2018">
+                            Segundo Galvão et al. (2018), um software de ordem de serviço web pode gerar diversas informações, agilizando processos de maneira mais organizada e rápida, permitindo cadastrar clientes e equipamentos com segurança para ambas as partes - tanto cliente
+                            quanto estabelecimento. Isso garante controle do que foi entregue para orçamento ou reparo e organização do que está entrando, saindo ou foi entregue.
+                        </blockquote>
+
+                        <blockquote cite="Razzolini Filho, 2010, p.30">
+                            Para Razzolini Filho (2010, p.30), serviço é uma atividade ou conjunto de atividades que visa satisfazer as necessidades, expectativas e desejos dos clientes. Os serviços possuem características específicas que os diferenciam dos produtos, como intangibilidade
+                            e inseparabilidade, sendo caracterizados como adaptáveis ao cenário em que se inserem.
+                        </blockquote>
+                    </div>
+
+                    <div class="feature-card">
+                        <div class="fc-head">
+                            <div class="fc-icon"><i class="fa-solid fa-handshake"></i></div>
+                            <h5>4.2 A Importância da Gestão de Serviços para Pequenas Empresas</h5>
+                        </div>
+                        <blockquote cite="Richardson, 1999">
+                            <p>Richardson (1999) destaca que a prestação de serviços oferece vantagens significativas para as organizações:</p>
+                            <ul>
+                                <li>Agrega valor aos produtos da empresa</li>
+                                <li>Conquista a fidelização dos clientes</li>
+                                <li>Auxilia as estratégias de marketing das organizações</li>
+                                <li>Fornece suporte às estratégias competitivas e mercadológicas</li>
+                            </ul>
+                        </blockquote>
+                        <blockquote cite="SPILLER, 2015">
+                            A padronização de processos em serviços, embora mais complexa que em produtos, pode ser facilitada através de sistemas informatizados que proporcionam conforto interno e maior confiança aos colaboradores e clientes na tomada de decisões (SPILLER, 2015).
+                        </blockquote>
+                    </div>
+
+                    <div class="feature-card">
+                        <div class="fc-head">
+                            <div class="fc-icon"><i class="fa-solid fa-layer-group"></i></div>
+                            <h5>4.3 Engenharia de Software Aplicada a Sistemas de Gestão</h5>
+                        </div>
+                        <h6 class="mt-1 mb-2 fw-bold">4.3.1 Conceitos Fundamentais</h6>
+                        <p>
+                            A engenharia de software está relacionada a diversos aspectos da produção de sistemas, desde o início até os detalhes finais de manutenção, encontrando-se presente em todas as áreas de produção.
+                        </p>
+                        <blockquote cite="SOMMERVILLE, 2017">
+                            <p>
+                                (SOMMERVILLE, 2017).
+                            </p>
+                        </blockquote>
+
+                        <p>
+                            Essa disciplina é capaz de criar um roteiro de implementação buscando máxima eficiência, proporcionando ao produto final controle e, principalmente, qualidade.
+                        </p>
+                        <blockquote cite="GIRARDI, 2004">
+                            <p>
+                                (GIRARDI, 2004).
+                            </p>
+                        </blockquote>
+                        <blockquote cite="Pressman e Maxim, 2016">
+                            Pressman e Maxim (2016) conceituam software como instruções de computador que executam funções capazes de gerar algum tipo de informação, seja virtual ou impressa. O software compõe-se de entrada (input) e saída (output), coletando dados de diversos tipos
+                            que são combinados com regras programadas para gerar resultados significativos aos usuários.
+                        </blockquote>
+                        <!--/4.3.1 -->
+                        <blockquote cite="SOMMERVILLE, 2007; SOMMERVILLE, 2011; ROSA, 2005">
+                            <p>Durante o levantamento de requisitos, os requisitos de um sistema são descrições dos serviços fornecidos pelo sistema e suas restrições operacionais. Esses requisitos podem refletir necessidades dos clientes para resolver problemas
+                                específicos, como controlar processos ou gerenciar informações. O processo de descobrir, analisar, documentar e verificar serviços e restrições é chamado de engenharia de requisitos (SOMMERVILLE, 2007).</p>
+
+                            <p>Os requisitos dividem-se em duas categorias principais:</p>
+
+                            <p><strong>Requisitos Funcionais:</strong> descrevem o que um sistema deve fazer, dependendo do tipo de software desenvolvido e dos usuários aos quais se destina. Quando expressos como requisitos de usuário, podem ser descritos
+                                de forma abstrata, detalhando funções, entradas e saídas do sistema (SOMMERVILLE, 2011).</p>
+
+                            <p><strong>Requisitos Não Funcionais:</strong> não estão diretamente relacionados às funções específicas fornecidas pelo sistema, podendo estar relacionados a propriedades emergentes como confiabilidade, tempo de resposta e espaço
+                                de armazenamento. Podem definir restrições sobre capacidades de dispositivos e representações de dados (ROSA, 2005).</p>
+                        </blockquote>
+                    </div>
+
+                    <div class="feature-card">
+                        <div class="fc-head">
+                            <div class="fc-icon"><i class="fa-solid fa-microchip"></i></div>
+                            <h5>4.5 Tecnologias e Plataformas de Desenvolvimento</h5>
+                        </div>
+                        <h6 class="mt-1 mb-2 fw-bold">4.5.1 Arquitetura em Camadas</h6>
+                        <p>
+                            A estruturação de sistemas em camadas (apresentação, lógica de negócio e acesso a dados) segue práticas consolidadas de desenvolvimento, baseando-se na separação de responsabilidades. Essa abordagem facilita a manutenção do código, o reaproveitamento
+                            de componentes e a futura evolução do sistema.
+                        </p>
+
+                        <h6 class="mt-3 mb-2 fw-bold">4.5.2 Plataforma .NET e C#</h6>
+                        <p>
+                            O framework .NET da Microsoft oferece um ambiente robusto para desenvolvimento de aplicações empresariais. A linguagem C#, integrada a este ecossistema, proporciona tipagem forte, orientação a objetos e recursos avançados para desenvolvimento de sistemas
+                            web através do ASP.NET.
+                        </p>
+
+                        <h6 class="mt-3 mb-2 fw-bold">4.5.3 ASP.NET para Desenvolvimento Web</h6>
+                        <p>
+                            O ASP.NET é uma plataforma de desenvolvimento web que permite a criação de aplicações robustas e escaláveis, oferecendo recursos avançados para desenvolvimento de sistemas empresariais, incluindo suporte nativo para bancos de dados relacionais.
+                        </p>
+
+                        <h6 class="mt-3 mb-2 fw-bold">4.5.4 Sistemas de Gerenciamento de Banco de Dados</h6>
+                        <blockquote cite="DATE, 2004">
+                            <p>O SQL Server é um sistema de gerenciamento de banco de dados relacional (SGBD) que permite ao usuário armazenar, manipular, atualizar e deletar informações. Essas informações devem ter significado e valor para indivíduos ou
+                                instituições, auxiliando processos gerais dos usuários (DATE, 2004).</p>
+                        </blockquote>
+
+                        <blockquote cite="COSTA, 2016">
+                            <p>O projeto de banco de dados utiliza três etapas principais: modelagem conceitual, lógica e física, buscando demonstrar como as informações serão armazenadas eficientemente (COSTA, 2016).</p>
+                        </blockquote>
+
+                        <h6 class="mt-3 mb-2 fw-bold">4.5.5 Ferramentas de Desenvolvimento Integrado</h6>
+                        <p>
+                            As IDEs (Integrated Development Environment) modernas oferecem recursos avançados como depuração, IntelliSense, integração com controle de versão e ferramentas de teste, proporcionando alta produtividade no desenvolvimento de aplicações. Essas ferramentas
+                            são essenciais para manter a qualidade e organização do código durante todo o ciclo de desenvolvimento.
+                        </p>
+                    </div>
+
+                    <div class="feature-card">
+                        <div class="fc-head">
+                            <div class="fc-icon"><i class="fa-solid fa-diagram-project"></i></div>
+                            <h5>4.6 Modelagem de Software</h5>
+                        </div>
+                        <h6 class="mt-1 mb-2 fw-bold">4.6.1 UML (Unified Modeling Language)</h6>
+                        <blockquote cite="GUEDES, 2009">
+                            A UML tem como objetivo fornecer múltiplas visões dos sistemas para melhorar, reforçar especificações, visualizações e documentações dos requisitos de software. A UML permite sobrepor um modelo a um plano de arquitetura, auxiliando no desenvolvimento
+                            de projetos de sistema e compreendendo processos de negócio, funções do sistema e esquemas de banco de dados (GUEDES, 2009).
+                        </blockquote>
+
+                        <h6 class="mt-3 mb-2 fw-bold">4.6.2 Diagramas de Caso de Uso</h6>
+                        <blockquote cite="GUEDES, 2009">
+                            <p>O diagrama de caso de uso concentra-se em atores e casos de uso. Os atores representam papéis desempenhados por usuários que utilizam serviços e funções do sistema. Os casos de uso capturam requisitos do sistema, referindo-se
+                                a serviços, tarefas ou funcionalidades identificadas como necessárias e que podem ser utilizadas pelos atores (GUEDES, 2009).</p>
+                        </blockquote>
+
+                        <h6 class="mt-3 mb-2 fw-bold">4.6.3 Diagrama de Entidade-Relacionamento (DER)</h6>
+                        <blockquote cite="Rezende, 2005">
+                            <p>Segundo Rezende (2005), o DER tem como objetivo principal representar objetos de dados e suas relações, finalizando a representação em tabelas de dados. É uma técnica de modelagem usada em conjunto com outras técnicas de diagramação
+                                que direcionam o desenvolvimento de software e projetos de bancos de dados.</p>
+                        </blockquote>
+                    </div>
+
+                    <div class="feature-card">
+                        <div class="fc-head">
+                            <div class="fc-icon"><i class="fa-solid fa-toolbox"></i></div>
+                            <h5>4.7 Sistemas de Gestão para Assistências Técnicas</h5>
+                        </div>
+                        <blockquote cite="Cutrim, 2016">
+                            <p>A implementação de sistemas informatizados em assistências técnicas de pequeno porte apresenta desafios específicos relacionados à limitação de recursos e necessidade de soluções acessíveis. Cutrim (2016) destaca que empresas
+                                de informática necessitam de software específico para gerir suas atividades, proporcionando tanto gestão quanto segurança.</p>
+                        </blockquote>
+
+                        <p>
+                            A digitalização de processos manuais através de sistemas web permite maior organização, controle de status de atendimento e rastreabilidade de informações, elementos essenciais para o crescimento sustentável de pequenos negócios no setor de assistência
+                            técnica.
+                        </p>
+                    </div>
+
+                    <div class="nav-steps">
+                        <a class="step-pill" href="descricao-sistema.html">
+                            <span class="step-title"><i class="fa-solid fa-arrow-left-long me-2"></i>Anterior</span>
+                            <span class="step-sub">Descrição do Sistema</span>
+                        </a>
+                        <a class="step-pill" href="ambiente.html">
+                            <span class="step-title">Próximo<i class="fa-solid fa-arrow-right-long ms-2"></i></span>
+                            <span class="step-sub">Ambiente</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer class="text-center text-muted py-4 footer-min">
+        <div class="container small">GS CELL — TCC | Gheizla Santos</div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

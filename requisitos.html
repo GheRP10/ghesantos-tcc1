@@ -1,0 +1,300 @@
+<!doctype html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>6. REQUISITOS DO SISTEMA — GS CELL</title>
+    <meta name="description" content="6. REQUISITOS DO SISTEMA — Documentação do GS CELL">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../gheSantos_TCC/css/styles.css">
+    <link rel="stylesheet" href="../gheSantos_TCC/css/pgrequisitos.css">
+    <link rel="icon" type="image/png" href="assets/gs_icon.png">
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-darkviolet">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">GS</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navContent">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+            <div id="navContent" class="collapse navbar-collapse">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Início</a></li>
+                    <li class="nav-item"><a class="nav-link" href="introducao.html">Introdução</a></li>
+                    <li class="nav-item"><a class="nav-link" href="objetivos.html">Objetivos</a></li>
+                    <li class="nav-item"><a class="nav-link" href="descricao-sistema.html">Descrição</a></li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Documentação</a>
+                        <ul class="dropdown-menu dropdown-menu-end">
+                            <li><a class="dropdown-item" href="modelagem.html">Fundamentação & Modelagem</a></li>
+                            <li><a class="dropdown-item" href="ambiente.html">Ambiente</a></li>
+                            <li><a class="dropdown-item" href="requisitos.html">Requisitos</a></li>
+                            <li><a class="dropdown-item" href="dicionarizacao.html">DER & Dicionarização</a></li>
+                            <li><a class="dropdown-item" href="diagramas.html">Diagramas</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item"><a class="nav-link" href="prototipacao.html">Prototipação</a></li>
+                    <li class="nav-item"><a class="nav-link" href="conclusao.html">Conclusão</a></li>
+                    <li class="nav-item"><a class="nav-link" href="referencias.html">Referências</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container content-section">
+
+        <div class="breadcrumb-wrap my-3">
+            <nav aria-label="breadcrumb">
+                <ol class="breadcrumb mb-0">
+                    <li class="breadcrumb-item"><a href="index.html">Início</a></li>
+                    <li class="breadcrumb-item">Documentação</li>
+                    <li class="breadcrumb-item active" aria-current="page">6. REQUISITOS DO SISTEMA</li>
+                </ol>
+            </nav>
+
+            <!-- Olho roxo – Apresentação Visual (fixo no canto direito) -->
+            <a href="requisitos-visual.html" class="eye-visual position-absolute top-50 end-0 translate-middle-y me-3" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Apresentação Visual" aria-label="Apresentação Visual">
+                <i class="fa-solid fa-eye"></i>
+            </a>
+        </div>
+
+        <div class="row">
+            <div class="col-lg-10 mx-auto">
+                <div class="content-card">
+                    <h1 class="text-center mb-4"><i class="fa-solid fa-clipboard-list text-accent me-3"></i> 6. REQUISITOS DO SISTEMA</h1>
+                    <!-- 6. REQUISITOS DO SISTEMA -->
+
+                    <!-- 6.1 Requisitos Funcionais -->
+                    <div class="desc-callout mb-3">
+                        <h5 class="mb-1"><i class="fa-solid fa-list-check text-accent me-2"></i>6.1 Requisitos Funcionais</h5>
+                        <p class="mb-2">Lista de funcionalidades essenciais para o funcionamento do sistema GS CELL.</p><br>
+
+                        <!-- RF01 - Cadastro de Clientes -->
+                        <div class="desc-callout mb-3">
+                            <h5 class="mb-1"><i class="fa-solid fa-user-plus text-accent me-2"></i>RF01 — Cadastro de Clientes</h5>
+                            <p>O sistema deve permitir o cadastro de clientes com histórico de atendimentos e mecanismos de busca, oferecendo flexibilidade conforme a necessidade do atendimento e preferência do cliente.</p>
+                            <h6 class="fw-bold mt-2">Modalidades de Cadastro</h6>
+                            <p class="mb-1 fw-semibold">Cadastro Simples:</p>
+                            <ul class="mb-2">
+                                <li><strong>Dados obrigatórios:</strong> Nome completo e telefone principal.</li>
+                                <li><strong>Dados opcionais:</strong> Contato de referência.</li>
+                                <li><strong>Finalidade:</strong> Atendimento rápido para clientes que não necessitam de documentação fiscal.</li>
+                                <li><strong>Documentação:</strong> Recibo de serviço para garantia.</li>
+                                <li><strong>Uso:</strong> Ideal para reparos simples e clientes que preferem agilidade.</li>
+                            </ul>
+                            <p class="mb-1 fw-semibold">Cadastro Completo:</p>
+                            <ul class="mb-2">
+                                <li><strong>Dados obrigatórios:</strong> Nome completo e telefone principal, CPF, endereço completo, e-mail.</li>
+                                <li><strong>Dados opcionais:</strong> Contato de referência.</li>
+                                <li><strong>Finalidade:</strong> Clientes que necessitam de documentação completa ou nota fiscal.</li>
+                                <li><strong>Documentação:</strong> Permite futuras integrações com sistemas de emissão fiscal.</li>
+                                <li><strong>Uso:</strong> Ideal para clientes corporativos ou que demandam faturamento.</li>
+                            </ul>
+                            <p class="mb-0">Esta flexibilidade reflete o foco do sistema GS CELL na gestão operacional das ordens de serviço, mantendo a separação de responsabilidades entre controle operacional e emissão fiscal.</p>
+                        </div>
+
+                        <!-- RF02 - Cadastro de Ordens de Serviço -->
+                        <div class="desc-callout mb-3">
+                            <h5 class="mb-1"><i class="fa-solid fa-file-lines text-accent me-2"></i>RF02 — Cadastro de Ordens de Serviço</h5>
+                            <p>O sistema deve permitir o registro detalhado de ordens de serviço incluindo informações do cliente, descrição do dispositivo, problema relatado, orçamento preliminar e prazo de entrega estimado.</p>
+                            <h6 class="fw-bold mt-2">Controle de Status</h6>
+                            <ul class="mb-0">
+                                <li>Fluxo de trabalho com estados predefinidos, registrando datas e responsáveis por cada mudança.</li>
+                                <li><strong>OSO</strong> — Orçamento · <strong>OSS</strong> — Solicitada · <strong>OSA</strong> — Em Andamento · <strong>OSF</strong> — Finalizada · <strong>OSE</strong> — Entregue · <strong>OSC</strong> — Cancelada.</li>
+                            </ul>
+                        </div>
+
+                        <!-- RF03 - Cadastro de Funcionários -->
+                        <div class="desc-callout mb-3">
+                            <h5 class="mb-1"><i class="fa-solid fa-id-badge text-accent me-2"></i>RF03 — Cadastro de Funcionários</h5>
+                            <ul class="mb-0">
+                                <li>Cadastro, edição e inativação de funcionários que atuam no processo operacional.</li>
+                                <li>Dados: nome, sobrenome, CPF, telefone, cargo, e-mail. Funcionários são vinculados às operações.</li>
+                                <li>O cargo define o nível de acesso (administrador, gerente, técnico, atendente).</li>
+                            </ul>
+                        </div>
+
+                        <!-- RF04 - Cadastro de Usuários -->
+                        <div class="desc-callout mb-3">
+                            <h5 class="mb-1"><i class="fa-solid fa-user-shield text-accent me-2"></i>RF04 — Cadastro de Usuários</h5>
+                            <ul class="mb-0">
+                                <li>Cadastro, edição e inativação de usuários responsáveis pelo acesso ao sistema.</li>
+                                <li>Usuário obrigatoriamente vinculado a um funcionário previamente cadastrado.</li>
+                                <li>Login gerado automaticamente combinando nome, sobrenome e três primeiros dígitos do CPF do funcionário.</li>
+                                <li>Definição e alteração de senha com armazenamento seguro (criptografia).</li>
+                                <li>Nível de acesso herdado do cargo do funcionário vinculado.</li>
+                            </ul>
+                        </div>
+
+                        <!-- RF05 - Cadastro de Produtos -->
+                        <div class="desc-callout mb-3">
+                            <h5 class="mb-1"><i class="fa-solid fa-boxes-stacked text-accent me-2"></i>RF05 — Cadastro de Produtos</h5>
+                            <p>Registro e controle de estoque de produtos e componentes utilizados nos reparos, incluindo preço de custo, preço de venda e quantidade.</p>
+                            <h6 class="fw-bold mt-2">Controle de Estrutura</h6>
+                            <ul>
+                                <li><strong>Grupo Produto:</strong> Telas, Baterias, Acessórios (categoria por tipo).</li>
+                                <li><strong>Unidade:</strong> UN (Unidade), CX (Caixa), PC (Peça).</li>
+                            </ul>
+                        </div>
+
+                        <!-- RF06 - Vinculação de produtos à OS -->
+                        <div class="desc-callout mb-3">
+                            <h5 class="mb-1"><i class="fa-solid fa-link text-accent me-2"></i>RF06 — Vinculação de Produtos à Ordem de Serviço</h5>
+                            <p>Registro e controle dos produtos utilizados nos reparos com impacto no estoque (custo, preço de venda e quantidade disponível).</p>
+                        </div>
+
+                        <!-- RF07 - Controle Financeiro -->
+                        <div class="desc-callout mb-3">
+                            <h5 class="mb-1"><i class="fa-solid fa-sack-dollar text-accent me-2"></i>RF07 — Controle Financeiro</h5>
+                            <ul class="mb-0">
+                                <li>Registrar valores orçados, adiantamentos, pagamentos finais e formas de pagamento, gerando controle financeiro básico.</li>
+                            </ul>
+                        </div>
+
+                        <!-- RF08 - Cadastro de Aparelhos -->
+                        <div class="desc-callout mb-3">
+                            <h5 class="mb-1"><i class="fa-solid fa-mobile-screen-button text-accent me-2"></i>RF08 — Cadastro de Aparelhos</h5>
+                            <ul class="mb-0">
+                                <li>Cadastro e gerenciamento de aparelhos (marca, modelo, tipo, observações) para vínculo às ordens de serviço.</li>
+                            </ul>
+                        </div>
+
+                        <!-- RF09 - Registro de Operações (Log) -->
+                        <div class="desc-callout mb-3">
+                            <h5 class="mb-1"><i class="fa-solid fa-clock-rotate-left text-accent me-2"></i>RF09 — Registro de Operações (Log de Sistema)</h5>
+                            <ul class="mb-0">
+                                <li>Histórico das operações realizadas: data, hora, tipo de ação e identificação do usuário responsável.</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- 6.2 Requisitos Não Funcionais -->
+                    <div class="desc-callout mb-3">
+                        <h5 class="mb-1"><i class="fa-solid fa-sliders text-accent me-2"></i>6.2 Requisitos Não Funcionais</h5>
+                        <p class="mb-0">Qualidades e restrições que garantem desempenho, segurança e manutenção do sistema.</p>
+
+                        <!-- RNF01..RNF14 -->
+                        <div class="desc-callout mb-3">
+                            <h5 class="mb-1"><i class="fa-solid fa-face-smile text-accent me-2"></i>RNF01 — Usabilidade</h5>
+                            <ul class="mb-0">
+                                <li>Interface intuitiva e responsiva, adaptável a diferentes dispositivos e tamanhos de tela, com tempo de aprendizado reduzido.</li>
+                            </ul>
+                        </div>
+
+                        <div class="desc-callout mb-3">
+                            <h5 class="mb-1"><i class="fa-solid fa-gauge-high text-accent me-2"></i>RNF02 — Desempenho</h5>
+                            <ul class="mb-0">
+                                <li>Tempo máximo de resposta de 3 segundos mesmo em períodos de pico.</li>
+                            </ul>
+                        </div>
+
+                        <div class="desc-callout mb-3">
+                            <h5 class="mb-1"><i class="fa-solid fa-clock text-accent me-2"></i>RNF03 — Disponibilidade</h5>
+                            <ul class="mb-0">
+                                <li>Disponibilidade mínima de 99%, com manutenções programadas fora do horário comercial.</li>
+                            </ul>
+                        </div>
+
+                        <div class="desc-callout mb-3">
+                            <h5 class="mb-1"><i class="fa-solid fa-shield-halved text-accent me-2"></i>RNF04 — Segurança</h5>
+                            <ul class="mb-0">
+                                <li>Autenticação segura, controle de acesso por perfis, criptografia de dados sensíveis e proteção contra ataques comuns (SQL Injection, XSS).</li>
+                            </ul>
+                        </div>
+
+                        <div class="desc-callout mb-3">
+                            <h5 class="mb-1"><i class="fa-solid fa-arrows-spin text-accent me-2"></i>RNF05 — Escalabilidade</h5>
+                            <ul class="mb-0">
+                                <li>Suporte ao crescimento da base de dados e número de usuários sem degradação significativa de desempenho.</li>
+                            </ul>
+                        </div>
+
+                        <div class="desc-callout mb-3">
+                            <h5 class="mb-1"><i class="fa-solid fa-globe text-accent me-2"></i>RNF06 — Portabilidade</h5>
+                            <ul class="mb-0">
+                                <li>Compatível com navegadores (Chrome, Firefox, Safari, Edge) em versões recentes.</li>
+                            </ul>
+                        </div>
+
+                        <div class="desc-callout mb-3">
+                            <h5 class="mb-1"><i class="fa-solid fa-screwdriver-wrench text-accent me-2"></i>RNF07 — Manutenibilidade</h5>
+                            <ul class="mb-0">
+                                <li>Código modular, bem documentado e seguindo padrões de desenvolvimento para facilitar manutenção e evolução.</li>
+                            </ul>
+                        </div>
+
+                        <div class="desc-callout mb-3">
+                            <h5 class="mb-1"><i class="fa-solid fa-print text-accent me-2"></i>RNF08 — Compatibilidade</h5>
+                            <ul class="mb-0">
+                                <li>Compatível com impressoras térmicas padrão de mercado para etiquetas e recibos.</li>
+                            </ul>
+                        </div>
+
+                        <div class="desc-callout mb-3">
+                            <h5 class="mb-1"><i class="fa-solid fa-file-pdf text-accent me-2"></i>RNF09 — Geração de Relatórios</h5>
+                            <ul class="mb-0">
+                                <li>Relatórios personalizáveis em PDF com base em diversos filtros (período, status, técnico, tipo de serviço).</li>
+                            </ul>
+                        </div>
+
+                        <div class="desc-callout mb-3">
+                            <h5 class="mb-1"><i class="fa-solid fa-user-gear text-accent me-2"></i>RNF10 — Atribuição de Responsabilidades</h5>
+                            <ul class="mb-0">
+                                <li>Identificação dos funcionários responsáveis por cada etapa do processo (atendimento, diagnóstico, reparo, entrega).</li>
+                            </ul>
+                        </div>
+
+                        <div class="desc-callout mb-3">
+                            <h5 class="mb-1"><i class="fa-solid fa-file-pdf text-accent me-2"></i>RNF11 — Geração de Relatórios</h5>
+                            <ul class="mb-0">
+                                <li>Relatórios personalizáveis em PDF com base em diversos filtros (período, status, técnico, tipo de serviço).</li>
+                            </ul>
+                        </div>
+
+                        <div class="desc-callout mb-3">
+                            <h5 class="mb-1"><i class="fa-solid fa-clipboard-list text-accent me-2"></i>RNF12 — Histórico de Alterações</h5>
+                            <ul class="mb-0">
+                                <li>Log de todas as alterações nas ordens de serviço, com usuário, data, hora e modificação realizada.</li>
+                            </ul>
+                        </div>
+
+                        <div class="desc-callout mb-3">
+                            <h5 class="mb-1"><i class="fa-solid fa-magnifying-glass text-accent me-2"></i>RNF13 — Busca e Filtros</h5>
+                            <ul class="mb-0">
+                                <li>Mecanismos avançados de busca e filtros para localização rápida de OS com base em diversos parâmetros.</li>
+                            </ul>
+                        </div>
+
+                        <div class="desc-callout">
+                            <h5 class="mb-1"><i class="fa-solid fa-database text-accent me-2"></i>RNF14 — Backup e Restauração</h5>
+                            <ul class="mb-0">
+                                <li>Backups manuais e programados, com opção de restauração de dados quando necessário.</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="nav-steps">
+                        <a class="step-pill" href="ambiente.html">
+                            <span class="step-title"><i class="fa-solid fa-arrow-left-long me-2"></i>Anterior</span>
+                            <span class="step-sub">Ambiente</span>
+                        </a>
+                        <a class="step-pill" href="dicionarizacao.html">
+                            <span class="step-title">Próximo<i class="fa-solid fa-arrow-right-long ms-2"></i></span>
+                            <span class="step-sub">Dicionarização do DER</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <footer class="text-center text-muted py-4 footer-min">
+        <div class="container small">GS CELL — TCC | Gheizla Santos</div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

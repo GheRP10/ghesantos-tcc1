@@ -1,0 +1,65 @@
+/* css_pgdiagram.css — estilos específicos para a página "diagramas" */
+
+.page-diagramas .content-card {
+    padding: 1.25rem;
+}
+
+.page-diagramas .summary-grid {
+    margin-top: .5rem;
+}
+
+.page-diagramas .summary-card .icon {
+    background: rgba(148, 0, 211, .15);
+    color: var(--accent, #9400D3);
+}
+
+.page-diagramas h2 .text-accent {
+    color: var(--accent, #9400D3);
+}
+
+.page-diagramas ul li {
+    margin-bottom: .25rem;
+}
+
+.page-diagramas ul li a {
+    color: var(--accent, #9400D3);
+}
+
+.page-diagramas ul li a:hover {
+    text-decoration: underline;
+}
+
+
+/* v20 pgdiagram tweaks */
+
+.page-diagramas .content-card {
+    padding: 1.25rem;
+}
+
+.page-diagramas .summary-grid {
+    margin-top: .5rem;
+}
+
+.page-diagramas .summary-card .icon {
+    background: rgba(148, 0, 211, .15);
+    color: var(--accent, #9400D3);
+}
+
+.page-diagrama .content-card {
+    padding: 1.25rem;
+}
+
+.nav-3btns {
+    margin-top: 1rem;
+    padding-top: .75rem;
+    border-top: 1px solid rgba(148, 0, 211, .18);
+}
+
+.diagram-figure {
+    text-align: center;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+
+
+/* End v20 */

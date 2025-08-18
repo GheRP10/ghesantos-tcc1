@@ -1,0 +1,1329 @@
+<!doctype html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>DER e Dicionarização — GS CELL</title>
+    <meta name="description" content="DER e Dicionarização — Documentação do GS CELL">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../gheSantos_TCC/css/styles.css">
+    <link rel="icon" type="image/png" href="assets/gs_icon.png">
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-darkviolet">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">GS</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navContent">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+            <div id="navContent" class="collapse navbar-collapse">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Início</a></li>
+                    <li class="nav-item"><a class="nav-link" href="introducao.html">Introdução</a></li>
+                    <li class="nav-item"><a class="nav-link" href="objetivos.html">Objetivos</a></li>
+                    <li class="nav-item"><a class="nav-link" href="descricao-sistema.html">Descrição</a></li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Documentação</a>
+                        <ul class="dropdown-menu dropdown-menu-end">
+                            <li><a class="dropdown-item" href="modelagem.html">Fundamentação & Modelagem</a></li>
+                            <li><a class="dropdown-item" href="ambiente.html">Ambiente</a></li>
+                            <li><a class="dropdown-item" href="requisitos.html">Requisitos</a></li>
+                            <li><a class="dropdown-item" href="dicionarizacao.html">DER & Dicionarização</a></li>
+                            <li><a class="dropdown-item" href="diagramas.html">Diagramas</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item"><a class="nav-link" href="prototipacao.html">Prototipação</a></li>
+                    <li class="nav-item"><a class="nav-link" href="conclusao.html">Conclusão</a></li>
+                    <li class="nav-item"><a class="nav-link" href="referencias.html">Referências</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container content-section">
+
+        <div class="breadcrumb-wrap my-3">
+            <nav aria-label="breadcrumb">
+                <ol class="breadcrumb mb-0">
+                    <li class="breadcrumb-item"><a href="index.html">Início</a></li>
+                    <li class="breadcrumb-item">Documentação</li>
+                    <li class="breadcrumb-item active" aria-current="page">7-9. DER e Dicionarização</li>
+                </ol>
+            </nav>
+
+            <!-- Olho roxo – Apresentação Visual (fixo no canto direito) -->
+            <a href="dicionarizacao-visual.html" class="eye-visual position-absolute top-50 end-0 translate-middle-y me-3" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Apresentação Visual" aria-label="Apresentação Visual">
+                <i class="fa-solid fa-eye"></i>
+            </a>
+        </div>
+
+
+        <div class="row">
+            <div class="col-lg-10 mx-auto">
+                <div class="content-card">
+                    <h1 class="text-center mb-4"><i class="fa-solid fa-database text-accent"></i> 7-9. DER & DICIONARIZAÇÃO</h1>
+
+                    <h2 class="mt-3"><i class="fa-solid fa-database text-accent"></i> 7. DIAGRAMA DE ENTIDADE-RELACIONAMENTO (DER)</h2>
+                    <div class="img-slot">
+                        <div class="py-4 text-center">
+                            <div class="text-center my-4">
+                                <img src="assets/diagramas/full/DER.png" alt="Diagrama de Entidade-Relacionamento" class="img-fluid rounded shadow">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="sep-lg"></div>
+
+                    <h2 class="mt-4"><i class="fas fa-tags text-accent"></i> 8. DICIONARIZAÇÃO DO DER</h2>
+                    <p class="mb-3">Estrutura completa das entidades do banco de dados e seus atributos.</p>
+
+                    <div class="card shadow-sm mb-4">
+                        <div class="card-header text-white fw-semibold" style="background:var(--accent)">8.1 — ENTIDADE: Aparelho</div>
+                        <div class="card-body p-0">
+
+                            <div class="table-responsive">
+                                <table class="table table-der table-sm table-hover table-bordered mb-0 align-middle">
+                                    <thead>
+                                        <tr>
+                                            <th>ATRIBUTO</th>
+                                            <th>TIPO</th>
+                                            <th>TAMANHO</th>
+                                            <th>ÍNDICE</th>
+                                            <th>OBRIGATÓRIO</th>
+                                            <th>DESCRIÇÃO</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td><strong>ID_Aparelho</strong></td>
+                                            <td>INT</td>
+                                            <td>-</td>
+                                            <td><span class="badge-pill badge-pk">PK</span></td>
+                                            <td><span class="badge-pill badge-sim">SIM</span></td>
+                                            <td>Identificador único do aparelho</td>
+                                        </tr>
+                                        <tr>
+                                            <td><strong>Marca_APA</strong></td>
+                                            <td>NVARCHAR</td>
+                                            <td>50</td>
+                                            <td>-</td>
+                                            <td><span class="badge-pill badge-sim">SIM</span></td>
+                                            <td>Marca do aparelho</td>
+                                        </tr>
+                                        <tr>
+                                            <td><strong>Modelo_APA</strong></td>
+                                            <td>NVARCHAR</td>
+                                            <td>100</td>
+                                            <td>-</td>
+                                            <td><span class="badge-pill badge-sim">SIM</span></td>
+                                            <td>Modelo de aparelho</td>
+                                        </tr>
+                                        <tr>
+                                            <td><strong>Tipo_APA</strong></td>
+                                            <td>NVARCHAR</td>
+                                            <td>50</td>
+                                            <td>-</td>
+                                            <td><span class="badge-pill badge-nao">NÃO</span></td>
+                                            <td>Tipo do aparelho</td>
+                                        </tr>
+                                        <tr>
+                                            <td><strong>Ativo_APA</strong></td>
+                                            <td>CHAR</td>
+                                            <td>1</td>
+                                            <td>-</td>
+                                            <td><span class="badge-pill badge-sim">SIM</span></td>
+                                            <td>Aparelho disponível</td>
+                                        </tr>
+                                        <tr>
+                                            <td><strong>DataInc_APA</strong></td>
+                                            <td>DATETIME</td>
+                                            <td>7</td>
+                                            <td>-</td>
+                                            <td><span class="badge-pill badge-sim">SIM</span></td>
+                                            <td>Data de inclusão</td>
+                                        </tr>
+                                        <tr>
+                                            <td><strong>Observacoes_APA</strong></td>
+                                            <td>NVARCHAR</td>
+                                            <td>MAX</td>
+                                            <td>-</td>
+                                            <td><span class="badge-pill badge-nao">NÃO</span></td>
+                                            <td>Observações</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="card shadow-sm mb-4">
+                        <div class="card-header text-white fw-semibold" style="background:var(--accent)">8.2 — ENTIDADE: Cliente</div>
+                        <div class="card-body p-0">
+
+                            <div class="table-responsive">
+                                <table class="table table-der table-sm table-hover table-bordered mb-0 align-middle">
+                                    <thead>
+                                        <tr>
+                                            <th>ATRIBUTO</th>
+                                            <th>TIPO</th>
+                                            <th>TAMANHO</th>
+                                            <th>ÍNDICE</th>
+                                            <th>OBRIGATÓRIO</th>
+                                            <th>DESCRIÇÃO</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td><strong>ID_Cliente</strong></td>
+                                            <td>INT</td>
+                                            <td>-</td>
+                                            <td><span class="badge-pill badge-pk">PK</span></td>
+                                            <td><span class="badge-pill badge-sim">SIM</span></td>
+                                            <td>Identificador único do cliente</td>
+                                        </tr>
+                                        <tr>
+                                            <td><strong>Nome_CLI</strong></td>
+                                            <td>NVARCHAR</td>
+                                            <td>150</td>
+                                            <td>-</td>
+                                            <td><span class="badge-pill badge-sim">SIM</span></td>
+                                            <td>Nome completo do cliente</td>
+                                        </tr>
+                                        <tr>
+                                            <td><strong>Telefone_CLI</strong></td>
+                                            <td>NVARCHAR</td>
+                                            <td>11</td>
+                                            <td>-</td>
+                                            <td><span class="badge-pill badge-sim">SIM</span></td>
+                                            <td>Telefone principal</td>
+                                        </tr>
+                                        <tr>
+                                            <td><strong>CPF_CLI</strong></td>
+                                            <td>NVARCHAR</td>
+                                            <td>11</td>
+                                            <td>-</td>
+                                            <td><span class="badge-pill badge-nao">NÃO</span></td>
+                                            <td>CPF do cliente</td>
+                                        </tr>
+                                        <tr>
+                                            <td><strong>Nome_Contato_Referencia_CLI</strong></td>
+                                            <td>NVARCHAR</td>
+                                            <td>150</td>
+                                            <td>-</td>
+                                            <td><span class="badge-pill badge-nao">NÃO</span></td>
+                                            <td>Nome do contato de referência</td>
+                                        </tr>
+                                        <tr>
+                                            <td><strong>Telefone_Contato_Referencia_CLI</strong></td>
+                                            <td>NVARCHAR</td>
+                                            <td>11</td>
+                                            <td>-</td>
+                                            <td><span class="badge-pill badge-nao">NÃO</span></td>
+                                            <td>Telefone do contato de referência</td>
+                                        </tr>
+                                        <tr>
+                                            <td><strong>Email_CLI</strong></td>
+                                            <td>NVARCHAR</td>
+                                            <td>255</td>
+                                            <td>-</td>
+                                            <td><span class="badge-pill badge-nao">NÃO</span></td>
+                                            <td>E-mail do cliente</td>
+                                        </tr>
+                                        <tr>
+                                            <td><strong>Endereco_CLI</strong></td>
+                                            <td>NVARCHAR</td>
+                                            <td>150</td>
+                                            <td>-</td>
+                                            <td><span class="badge-pill badge-nao">NÃO</span></td>
+                                            <td>Logradouro</td>
+                                        </tr>
+                                        <tr>
+                                            <td><strong>Endereco_Numero_CLI</strong></td>
+                                            <td>NVARCHAR</td>
+                                            <td>10</td>
+                                            <td>-</td>
+                                            <td><span class="badge-pill badge-nao">NÃO</span></td>
+                                            <td>Número do endereço</td>
+                                        </tr>
+                                        <tr>
+                                            <td><strong>Bairro_CLI</strong></td>
+                                            <td>NVARCHAR</td>
+                                            <td>100</td>
+                                            <td>-</td>
+                                            <td><span class="badge-pill badge-nao">NÃO</span></td>
+                                            <td>Bairro</td>
+                                        </tr>
+                                        <tr>
+                                            <td><strong>Cidade_CLI</strong></td>
+                                            <td>NVARCHAR</td>
+                                            <td>100</td>
+                                            <td>-</td>
+                                            <td><span class="badge-pill badge-nao">NÃO</span></td>
+                                            <td>Cidade</td>
+                                        </tr>
+                                        <tr>
+                                            <td><strong>UF_CLI</strong></td>
+                                            <td>CHAR</td>
+                                            <td>2</td>
+                                            <td>-</td>
+                                            <td><span class="badge-pill badge-nao">NÃO</span></td>
+                                            <td>Estado</td>
+                                        </tr>
+                                        <tr>
+                                            <td><strong>CEP_CLI</strong></td>
+                                            <td>NVARCHAR</td>
+                                            <td>8</td>
+                                            <td>-</td>
+                                            <td><span class="badge-pill badge-nao">NÃO</span></td>
+                                            <td>Código Postal</td>
+                                        </tr>
+                                        <tr>
+                                            <td><strong>Tipo_Cadastro_CLI</strong></td>
+                                            <td>CHAR</td>
+                                            <td>1</td>
+                                            <td>-</td>
+                                            <td><span class="badge-pill badge-nao">NÃO</span></td>
+                                            <td>Tipo de cadastro (simples/completo)</td>
+                                        </tr>
+                                        <tr>
+                                            <td><strong>Data_Cadastro_CLI</strong></td>
+                                            <td>DATETIME</td>
+                                            <td>7</td>
+                                            <td>-</td>
+                                            <td><span class="badge-pill badge-nao">NÃO</span></td>
+                                            <td>Data de cadastro</td>
+                                        </tr>
+                                        <tr>
+                                            <td><strong>Data_Ultimo_Conserto_CLI</strong></td>
+                                            <td>DATETIME</td>
+                                            <td>7</td>
+                                            <td>-</td>
+                                            <td><span class="badge-pill badge-nao">NÃO</span></td>
+                                            <td>Data do último conserto</td>
+                                        </tr>
+                                        <tr>
+                                            <td><strong>Observacoes_CLI</strong></td>
+                                            <td>NVARCHAR</td>
+                                            <td>500</td>
+                                            <td>-</td>
+                                            <td><span class="badge-pill badge-nao">NÃO</span></td>
+                                            <td>Observações sobre o cliente</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="card shadow-sm mb-4">
+                        <div class="card-header text-white fw-semibold" style="background:var(--accent)">8.3 — ENTIDADE: Financeiro_FP</div>
+                        <div class="card-body p-0">
+
+                            <div class="table-responsive">
+                                <table class="table table-der table-sm table-hover table-bordered mb-0 align-middle">
+                                    <thead>
+                                        <tr>
+                                            <th>ATRIBUTO</th>
+                                            <th>TIPO</th>
+                                            <th>TAMANHO</th>
+                                            <th>ÍNDICE</th>
+                                            <th>OBRIGATÓRIO</th>
+                                            <th>DESCRIÇÃO</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td><strong>ID_Financeiro_FP</strong></td>
+                                            <td>INT</td>
+                                            <td>-</td>
+                                            <td><span class="badge-pill badge-pk">PK</span></td>
+                                            <td><span class="badge-pill badge-sim">SIM</span></td>
+                                            <td>Identificador único da forma de pagamento</td>
+                                        </tr>
+                                        <tr>
+                                            <td><strong>Codigo_FP</strong></td>
+                                            <td>CHAR</td>
+                                            <td>3</td>
+                                            <td>-</td>
+                                            <td><span class="badge-pill badge-sim">SIM</span></td>
+                                            <td>Código da forma de pagamento</td>
+                                        </tr>
+                                        <tr>
+                                            <td><strong>Descricao_FP</strong></td>
+                                            <td>NVARCHAR</td>
+                                            <td>50</td>
+                                            <td>-</td>
+                                            <td><span class="badge-pill badge-sim">SIM</span></td>
+                                            <td>Descrição da forma de pagamento</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="card shadow-sm mb-4">
+                        <div class="card-header text-white fw-semibold" style="background:var(--accent)">8.4 — ENTIDADE: Funcionario</div>
+                        <div class="card-body p-0">
+
+                            <div class="table-responsive">
+                                <table class="table table-der table-sm table-hover table-bordered mb-0 align-middle">
+                                    <thead>
+                                        <tr>
+                                            <th>ATRIBUTO</th>
+                                            <th>TIPO</th>
+                                            <th>TAMANHO</th>
+                                            <th>ÍNDICE</th>
+                                            <th>OBRIGATÓRIO</th>
+                                            <th>DESCRIÇÃO</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td><strong>ID_Funcionario</strong></td>
+                                            <td>INT</td>
+                                            <td>-</td>
+                                            <td><span class="badge-pill badge-pk">PK</span></td>
+                                            <td><span class="badge-pill badge-sim">SIM</span></td>
+                                            <td>Identificador único do funcionário</td>
+                                        </tr>
+                                        <tr>
+                                            <td><strong>Nome_FUN</strong></td>
+                                            <td>NVARCHAR</td>
+                                            <td>150</td>
+                                            <td>-</td>
+                                            <td><span class="badge-pill badge-sim">SIM</span></td>
+                                            <td>Nome completo</td>
+                                        </tr>
+                                        <tr>
+                                            <td><strong>CPF_FUN</strong></td>
+                                            <td>NVARCHAR</td>
+                                            <td>11</td>
+                                            <td>-</td>
+                                            <td><span class="badge-pill badge-sim">SIM</span></td>
+                                            <td>CPF</td>
+                                        </tr>
+                                        <tr>
+                                            <td><strong>Telefone_FUN</strong></td>
+                                            <td>NVARCHAR</td>
+                                            <td>11</td>
+                                            <td>-</td>
+                                            <td><span class="badge-pill badge-sim">SIM</span></td>
+                                            <td>Telefone</td>
+                                        </tr>
+                                        <tr>
+                                            <td><strong>Email_FUN</strong></td>
+                                            <td>NVARCHAR</td>
+                                            <td>255</td>
+                                            <td>-</td>
+                                            <td><span class="badge-pill badge-nao">NÃO</span></td>
+                                            <td>E-mail</td>
+                                        </tr>
+                                        <tr>
+                                            <td><strong>Cargo_FUN</strong></td>
+                                            <td>NVARCHAR</td>
+                                            <td>50</td>
+                                            <td>-</td>
+                                            <td><span class="badge-pill badge-sim">SIM</span></td>
+                                            <td>Cargo</td>
+                                        </tr>
+                                        <tr>
+                                            <td><strong>Ativo_FUN</strong></td>
+                                            <td>CHAR</td>
+                                            <td>1</td>
+                                            <td>-</td>
+                                            <td><span class="badge-pill badge-nao">NÃO</span></td>
+                                            <td>Situação do funcionário</td>
+                                        </tr>
+                                        <tr>
+                                            <td><strong>DataInc_FUN</strong></td>
+                                            <td>DATETIME</td>
+                                            <td>7</td>
+                                            <td>-</td>
+                                            <td><span class="badge-pill badge-nao">NÃO</span></td>
+                                            <td>Data de inclusão</td>
+                                        </tr>
+                                        <tr>
+                                            <td><strong>DataAlt_FUN</strong></td>
+                                            <td>DATETIME</td>
+                                            <td>7</td>
+                                            <td>-</td>
+                                            <td><span class="badge-pill badge-nao">NÃO</span></td>
+                                            <td>Data da alteração</td>
+                                        </tr>
+                                        <tr>
+                                            <td><strong>Observacoes_FUN</strong></td>
+                                            <td>NVARCHAR</td>
+                                            <td>500</td>
+                                            <td>-</td>
+                                            <td><span class="badge-pill badge-nao">NÃO</span></td>
+                                            <td>Observações</td>
+                                        </tr>
+                                        <tr>
+                                            <td><strong>Nome_Sobrenome_FUN</strong></td>
+                                            <td>NVARCHAR</td>
+                                            <td>150</td>
+                                            <td>-</td>
+                                            <td><span class="badge-pill badge-nao">NÃO</span></td>
+                                            <td>Primeiro e último nome do funcionário</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="card shadow-sm mb-4">
+                        <div class="card-header text-white fw-semibold" style="background:var(--accent)">8.5 — ENTIDADE: GrupoProduto</div>
+                        <div class="card-body p-0">
+
+                            <div class="table-responsive">
+                                <table class="table table-der table-sm table-hover table-bordered mb-0 align-middle">
+                                    <thead>
+                                        <tr>
+                                            <th>ATRIBUTO</th>
+                                            <th>TIPO</th>
+                                            <th>TAMANHO</th>
+                                            <th>ÍNDICE</th>
+                                            <th>OBRIGATÓRIO</th>
+                                            <th>DESCRIÇÃO</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td><strong>ID_GrupoProduto</strong></td>
+                                            <td>INT</td>
+                                            <td>-</td>
+                                            <td><span class="badge-pill badge-pk">PK</span></td>
+                                            <td><span class="badge-pill badge-sim">SIM</span></td>
+                                            <td>Identificador único do grupo do produto</td>
+                                        </tr>
+                                        <tr>
+                                            <td><strong>Descricao_GPRO</strong></td>
+                                            <td>NVARCHAR</td>
+                                            <td>50</td>
+                                            <td><span class="badge-pill badge-fk">FK</span></td>
+                                            <td><span class="badge-pill badge-sim">SIM</span></td>
+                                            <td>Descrição do grupo do produto</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="card shadow-sm mb-4">
+                        <div class="card-header text-white fw-semibold" style="background:var(--accent)">8.6 — ENTIDADE: OrdemServico</div>
+                        <div class="card-body p-0">
+
+                            <div class="table-responsive">
+                                <table class="table table-der table-sm table-hover table-bordered mb-0 align-middle">
+                                    <thead>
+                                        <tr>
+                                            <th>ATRIBUTO</th>
+                                            <th>TIPO</th>
+                                            <th>TAMANHO</th>
+                                            <th>ÍNDICE</th>
+                                            <th>OBRIGATÓRIO</th>
+                                            <th>DESCRIÇÃO</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td><strong>ID_OrdemServico</strong></td>
+                                            <td>INT</td>
+                                            <td>-</td>
+                                            <td><span class="badge-pill badge-pk">PK</span></td>
+                                            <td><span class="badge-pill badge-sim">SIM</span></td>
+                                            <td>Identificador único da OS</td>
+                                        </tr>
+                                        <tr>
+                                            <td><strong>ID_Cliente_OS</strong></td>
+                                            <td>INT</td>
+                                            <td>-</td>
+                                            <td><span class="badge-pill badge-fk">FK</span></td>
+                                            <td><span class="badge-pill badge-sim">SIM</span></td>
+                                            <td>Chave estrangeira para Cliente</td>
+                                        </tr>
+                                        <tr>
+                                            <td><strong>ID_Atendente_OS</strong></td>
+                                            <td>INT</td>
+                                            <td>-</td>
+                                            <td><span class="badge-pill badge-fk">FK</span></td>
+                                            <td><span class="badge-pill badge-nao">NÃO</span></td>
+                                            <td>Funcionário que atendeu</td>
+                                        </tr>
+                                        <tr>
+                                            <td><strong>ID_Tecnico_Conserto_OS</strong></td>
+                                            <td>INT</td>
+                                            <td>-</td>
+                                            <td><span class="badge-pill badge-fk">FK</span></td>
+                                            <td><span class="badge-pill badge-nao">NÃO</span></td>
+                                            <td>Funcionário responsável pelo conserto</td>
+                                        </tr>
+                                        <tr>
+                                            <td><strong>ID_Aparelho_OS</strong></td>
+                                            <td>INT</td>
+                                            <td>-</td>
+                                            <td><span class="badge-pill badge-fk">FK</span></td>
+                                            <td><span class="badge-pill badge-nao">NÃO</span></td>
+                                            <td>Aparelho em serviço</td>
+                                        </tr>
+                                        <tr>
+                                            <td><strong>Status_OS</strong></td>
+                                            <td>CHAR</td>
+                                            <td>3</td>
+                                            <td>-</td>
+                                            <td><span class="badge-pill badge-sim">SIM</span></td>
+                                            <td>Status da OS</td>
+                                        </tr>
+                                        <tr>
+                                            <td><strong>Data_Abertura_OS</strong></td>
+                                            <td>DATETIME</td>
+                                            <td>7</td>
+                                            <td>-</td>
+                                            <td><span class="badge-pill badge-sim">SIM</span></td>
+                                            <td>Data de abertura</td>
+                                        </tr>
+                                        <tr>
+                                            <td><strong>Data_Conclusao_OS</strong></td>
+                                            <td>DATETIME</td>
+                                            <td>7</td>
+                                            <td>-</td>
+                                            <td><span class="badge-pill badge-nao">NÃO</span></td>
+                                            <td>Data de conclusão</td>
+                                        </tr>
+                                        <tr>
+                                            <td><strong>Data_Previsao_Entrega_OS</strong></td>
+                                            <td>DATETIME</td>
+                                            <td>7</td>
+                                            <td>-</td>
+                                            <td><span class="badge-pill badge-nao">NÃO</span></td>
+                                            <td>Previsão de entrega</td>
+                                        </tr>
+                                        <tr>
+                                            <td><strong>Data_Entrega_OS</strong></td>
+                                            <td>DATETIME</td>
+                                            <td>7</td>
+                                            <td>-</td>
+                                            <td><span class="badge-pill badge-nao">NÃO</span></td>
+                                            <td>Data de entrega</td>
+                                        </tr>
+                                        <tr>
+                                            <td><strong>Status_PG_OS</strong></td>
+                                            <td>CHAR</td>
+                                            <td>2</td>
+                                            <td>-</td>
+                                            <td><span class="badge-pill badge-nao">NÃO</span></td>
+                                            <td>Status do pagamento</td>
+                                        </tr>
+                                        <tr>
+                                            <td><strong>Valor_Pago_OS</strong></td>
+                                            <td>DECIMAL</td>
+                                            <td>10,2</td>
+                                            <td>-</td>
+                                            <td><span class="badge-pill badge-nao">NÃO</span></td>
+                                            <td>Valor pago</td>
+                                        </tr>
+                                        <tr>
+                                            <td><strong>Valor_Total_OS</strong></td>
+                                            <td>DECIMAL</td>
+                                            <td>10,2</td>
+                                            <td>-</td>
+                                            <td><span class="badge-pill badge-sim">SIM</span></td>
+                                            <td>Valor total</td>
+                                        </tr>
+                                        <tr>
+                                            <td><strong>Valor_Desconto_OS</strong></td>
+                                            <td>DECIMAL</td>
+                                            <td>10,2</td>
+                                            <td>-</td>
+                                            <td><span class="badge-pill badge-nao">NÃO</span></td>
+                                            <td>Valor de desconto</td>
+                                        </tr>
+                                        <tr>
+                                            <td><strong>Percentual_Desconto_OS</strong></td>
+                                            <td>DECIMAL</td>
+                                            <td>5,2</td>
+                                            <td>-</td>
+                                            <td><span class="badge-pill badge-nao">NÃO</span></td>
+                                            <td>Percentual de desconto</td>
+                                        </tr>
+                                        <tr>
+                                            <td><strong>Observacoes_OS</strong></td>
+                                            <td>NVARCHAR</td>
+                                            <td>500</td>
+                                            <td>-</td>
+                                            <td><span class="badge-pill badge-nao">NÃO</span></td>
+                                            <td>Observações</td>
+                                        </tr>
+                                        <tr>
+                                            <td><strong>Diagnostico_OS</strong></td>
+                                            <td>NVARCHAR</td>
+                                            <td>1000</td>
+                                            <td>-</td>
+                                            <td><span class="badge-pill badge-nao">NÃO</span></td>
+                                            <td>Problema encontrado</td>
+                                        </tr>
+                                        <tr>
+                                            <td><strong>Solucao_OS</strong></td>
+                                            <td>NVARCHAR</td>
+                                            <td>500</td>
+                                            <td>-</td>
+                                            <td><span class="badge-pill badge-nao">NÃO</span></td>
+                                            <td>Solução aplicada</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="card shadow-sm mb-4">
+                        <div class="card-header text-white fw-semibold" style="background:var(--accent)">8.7 — ENTIDADE: OS_Forma_PG</div>
+                        <div class="card-body p-0">
+
+                            <div class="table-responsive">
+                                <table class="table table-der table-sm table-hover table-bordered mb-0 align-middle">
+                                    <thead>
+                                        <tr>
+                                            <th>ATRIBUTO</th>
+                                            <th>TIPO</th>
+                                            <th>TAMANHO</th>
+                                            <th>ÍNDICE</th>
+                                            <th>OBRIGATÓRIO</th>
+                                            <th>DESCRIÇÃO</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td><strong>ID_OS_Forma_PG</strong></td>
+                                            <td>INT</td>
+                                            <td>-</td>
+                                            <td><span class="badge-pill badge-pk">PK</span></td>
+                                            <td><span class="badge-pill badge-sim">SIM</span></td>
+                                            <td>Identificador da forma de pagamento da OS</td>
+                                        </tr>
+                                        <tr>
+                                            <td><strong>ID_OrdemServico_OFPG</strong></td>
+                                            <td>INT</td>
+                                            <td>-</td>
+                                            <td><span class="badge-pill badge-fk">FK</span></td>
+                                            <td><span class="badge-pill badge-sim">SIM</span></td>
+                                            <td>Chave estrangeira para OS</td>
+                                        </tr>
+                                        <tr>
+                                            <td><strong>ID_Financeiro_OFPG</strong></td>
+                                            <td>INT</td>
+                                            <td>-</td>
+                                            <td><span class="badge-pill badge-fk">FK</span></td>
+                                            <td><span class="badge-pill badge-sim">SIM</span></td>
+                                            <td>Chave estrangeira para forma de pagamento</td>
+                                        </tr>
+                                        <tr>
+                                            <td><strong>Valor_Pago_OFPG</strong></td>
+                                            <td>DECIMAL</td>
+                                            <td>10,2</td>
+                                            <td>-</td>
+                                            <td><span class="badge-pill badge-nao">NÃO</span></td>
+                                            <td>Valor pago</td>
+                                        </tr>
+                                        <tr>
+                                            <td><strong>Observacoes_OFPG</strong></td>
+                                            <td>NVARCHAR</td>
+                                            <td>255</td>
+                                            <td>-</td>
+                                            <td><span class="badge-pill badge-nao">NÃO</span></td>
+                                            <td>Observações</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="card shadow-sm mb-4">
+                        <div class="card-header text-white fw-semibold" style="background:var(--accent)">8.8 — ENTIDADE: Produto</div>
+                        <div class="card-body p-0">
+
+                            <div class="table-responsive">
+                                <table class="table table-der table-sm table-hover table-bordered mb-0 align-middle">
+                                    <thead>
+                                        <tr>
+                                            <th>ATRIBUTO</th>
+                                            <th>TIPO</th>
+                                            <th>TAMANHO</th>
+                                            <th>ÍNDICE</th>
+                                            <th>OBRIGATÓRIO</th>
+                                            <th>DESCRIÇÃO</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td><strong>ID_Produto</strong></td>
+                                            <td>INT</td>
+                                            <td>-</td>
+                                            <td><span class="badge-pill badge-pk">PK</span></td>
+                                            <td><span class="badge-pill badge-sim">SIM</span></td>
+                                            <td>Identificador do produto</td>
+                                        </tr>
+                                        <tr>
+                                            <td><strong>Descricao_PRO</strong></td>
+                                            <td>NVARCHAR</td>
+                                            <td>100</td>
+                                            <td>-</td>
+                                            <td><span class="badge-pill badge-sim">SIM</span></td>
+                                            <td>Descrição do produto</td>
+                                        </tr>
+                                        <tr>
+                                            <td><strong>ID_Unidade_PRO</strong></td>
+                                            <td>INT</td>
+                                            <td>-</td>
+                                            <td><span class="badge-pill badge-fk">FK</span></td>
+                                            <td><span class="badge-pill badge-sim">SIM</span></td>
+                                            <td>Chave estrangeira para Unidade</td>
+                                        </tr>
+                                        <tr>
+                                            <td><strong>ID_GrupoProduto_PRO</strong></td>
+                                            <td>INT</td>
+                                            <td>-</td>
+                                            <td><span class="badge-pill badge-fk">FK</span></td>
+                                            <td><span class="badge-pill badge-sim">SIM</span></td>
+                                            <td>Chave estrangeira para GrupoProduto</td>
+                                        </tr>
+                                        <tr>
+                                            <td><strong>Preco_Compra_PRO</strong></td>
+                                            <td>DECIMAL</td>
+                                            <td>10,2</td>
+                                            <td>-</td>
+                                            <td><span class="badge-pill badge-sim">SIM</span></td>
+                                            <td>Preço de compra</td>
+                                        </tr>
+                                        <tr>
+                                            <td><strong>Preco_Venda_PRO</strong></td>
+                                            <td>DECIMAL</td>
+                                            <td>10,2</td>
+                                            <td>-</td>
+                                            <td><span class="badge-pill badge-sim">SIM</span></td>
+                                            <td>Preço de venda</td>
+                                        </tr>
+                                        <tr>
+                                            <td><strong>Saldo_Disponivel_PRO</strong></td>
+                                            <td>INT</td>
+                                            <td>-</td>
+                                            <td>-</td>
+                                            <td><span class="badge-pill badge-sim">SIM</span></td>
+                                            <td>Estoque disponível</td>
+                                        </tr>
+                                        <tr>
+                                            <td><strong>Codigo_Barra_PRO</strong></td>
+                                            <td>NVARCHAR</td>
+                                            <td>50</td>
+                                            <td>-</td>
+                                            <td><span class="badge-pill badge-nao">NÃO</span></td>
+                                            <td>Código de barras</td>
+                                        </tr>
+                                        <tr>
+                                            <td><strong>Ativo_PRO</strong></td>
+                                            <td>CHAR</td>
+                                            <td>1</td>
+                                            <td>-</td>
+                                            <td><span class="badge-pill badge-sim">SIM</span></td>
+                                            <td>Produto ativo</td>
+                                        </tr>
+                                        <tr>
+                                            <td><strong>UsuInc_PRO</strong></td>
+                                            <td>NVARCHAR</td>
+                                            <td>150</td>
+                                            <td>-</td>
+                                            <td><span class="badge-pill badge-sim">SIM</span></td>
+                                            <td>Usuário inclusão</td>
+                                        </tr>
+                                        <tr>
+                                            <td><strong>DataInc_PRO</strong></td>
+                                            <td>DATETIME</td>
+                                            <td>7</td>
+                                            <td>-</td>
+                                            <td><span class="badge-pill badge-sim">SIM</span></td>
+                                            <td>Data de inclusão</td>
+                                        </tr>
+                                        <tr>
+                                            <td><strong>UsuAlt_PRO</strong></td>
+                                            <td>NVARCHAR</td>
+                                            <td>150</td>
+                                            <td>-</td>
+                                            <td><span class="badge-pill badge-nao">NÃO</span></td>
+                                            <td>Usuário alteração</td>
+                                        </tr>
+                                        <tr>
+                                            <td><strong>DataAlt_PRO</strong></td>
+                                            <td>DATETIME</td>
+                                            <td>7</td>
+                                            <td>-</td>
+                                            <td><span class="badge-pill badge-nao">NÃO</span></td>
+                                            <td>Data da última alteração</td>
+                                        </tr>
+                                        <tr>
+                                            <td><strong>Observacao_PRO</strong></td>
+                                            <td>NVARCHAR</td>
+                                            <td>255</td>
+                                            <td>-</td>
+                                            <td><span class="badge-pill badge-nao">NÃO</span></td>
+                                            <td>Observações gerais</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="card shadow-sm mb-4">
+                        <div class="card-header text-white fw-semibold" style="background:var(--accent)">8.9 — ENTIDADE: Produto_OS</div>
+                        <div class="card-body p-0">
+
+                            <div class="table-responsive">
+                                <table class="table table-der table-sm table-hover table-bordered mb-0 align-middle">
+                                    <thead>
+                                        <tr>
+                                            <th>ATRIBUTO</th>
+                                            <th>TIPO</th>
+                                            <th>TAMANHO</th>
+                                            <th>ÍNDICE</th>
+                                            <th>OBRIGATÓRIO</th>
+                                            <th>DESCRIÇÃO</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td><strong>ID_POS</strong></td>
+                                            <td>INT</td>
+                                            <td>-</td>
+                                            <td><span class="badge-pill badge-pk">PK</span></td>
+                                            <td><span class="badge-pill badge-sim">SIM</span></td>
+                                            <td>Identificador do registro</td>
+                                        </tr>
+                                        <tr>
+                                            <td><strong>ID_Produto_POS</strong></td>
+                                            <td>INT</td>
+                                            <td>-</td>
+                                            <td><span class="badge-pill badge-fk">FK</span></td>
+                                            <td><span class="badge-pill badge-sim">SIM</span></td>
+                                            <td>Chave estrangeira de Produto</td>
+                                        </tr>
+                                        <tr>
+                                            <td><strong>ID_OrdemServico_POS</strong></td>
+                                            <td>INT</td>
+                                            <td>-</td>
+                                            <td><span class="badge-pill badge-fk">FK</span></td>
+                                            <td><span class="badge-pill badge-sim">SIM</span></td>
+                                            <td>Chave estrangeira de OS</td>
+                                        </tr>
+                                        <tr>
+                                            <td><strong>Quantidade_Utilizada_POS</strong></td>
+                                            <td>INT</td>
+                                            <td>-</td>
+                                            <td>-</td>
+                                            <td><span class="badge-pill badge-sim">SIM</span></td>
+                                            <td>Quantidade utilizada do produto</td>
+                                        </tr>
+                                        <tr>
+                                            <td><strong>Valor_Unitario_POS</strong></td>
+                                            <td>DECIMAL</td>
+                                            <td>10,2</td>
+                                            <td>-</td>
+                                            <td><span class="badge-pill badge-nao">NÃO</span></td>
+                                            <td>Valor do produto na OS</td>
+                                        </tr>
+                                        <tr>
+                                            <td><strong>Observacao_POS</strong></td>
+                                            <td>NVARCHAR</td>
+                                            <td>255</td>
+                                            <td>-</td>
+                                            <td><span class="badge-pill badge-nao">NÃO</span></td>
+                                            <td>Observações do produto</td>
+                                        </tr>
+                                        <tr>
+                                            <td><strong>DataInc_POS</strong></td>
+                                            <td>DATETIME</td>
+                                            <td>7</td>
+                                            <td>-</td>
+                                            <td><span class="badge-pill badge-sim">SIM</span></td>
+                                            <td>Data de inclusão</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="card shadow-sm mb-4">
+                        <div class="card-header text-white fw-semibold" style="background:var(--accent)">8.10 — ENTIDADE: Unidade</div>
+                        <div class="card-body p-0">
+
+                            <div class="table-responsive">
+                                <table class="table table-der table-sm table-hover table-bordered mb-0 align-middle">
+                                    <thead>
+                                        <tr>
+                                            <th>ATRIBUTO</th>
+                                            <th>TIPO</th>
+                                            <th>TAMANHO</th>
+                                            <th>ÍNDICE</th>
+                                            <th>OBRIGATÓRIO</th>
+                                            <th>DESCRIÇÃO</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td><strong>ID_Unidade</strong></td>
+                                            <td>INT</td>
+                                            <td>-</td>
+                                            <td><span class="badge-pill badge-pk">PK</span></td>
+                                            <td><span class="badge-pill badge-sim">SIM</span></td>
+                                            <td>Identificador único da unidade</td>
+                                        </tr>
+                                        <tr>
+                                            <td><strong>Codigo_UNI</strong></td>
+                                            <td>NVARCHAR</td>
+                                            <td>5</td>
+                                            <td>-</td>
+                                            <td><span class="badge-pill badge-sim">SIM</span></td>
+                                            <td>Código da unidade (UN, CX, PC)</td>
+                                        </tr>
+                                        <tr>
+                                            <td><strong>Descricao_UNI</strong></td>
+                                            <td>NVARCHAR</td>
+                                            <td>50</td>
+                                            <td>-</td>
+                                            <td><span class="badge-pill badge-sim">SIM</span></td>
+                                            <td>Descrição completa da unidade</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="card shadow-sm mb-4">
+                        <div class="card-header text-white fw-semibold" style="background:var(--accent)">8.11 — ENTIDADE: Usuario</div>
+                        <div class="card-body p-0">
+
+                            <div class="table-responsive">
+                                <table class="table table-der table-sm table-hover table-bordered mb-0 align-middle">
+                                    <thead>
+                                        <tr>
+                                            <th>ATRIBUTO</th>
+                                            <th>TIPO</th>
+                                            <th>TAMANHO</th>
+                                            <th>ÍNDICE</th>
+                                            <th>OBRIGATÓRIO</th>
+                                            <th>DESCRIÇÃO</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td><strong>ID_Usuario</strong></td>
+                                            <td>INT</td>
+                                            <td>-</td>
+                                            <td><span class="badge-pill badge-pk">PK</span></td>
+                                            <td><span class="badge-pill badge-sim">SIM</span></td>
+                                            <td>Identificador do usuário</td>
+                                        </tr>
+                                        <tr>
+                                            <td><strong>ID_Funcionario_USU</strong></td>
+                                            <td>INT</td>
+                                            <td>-</td>
+                                            <td><span class="badge-pill badge-fk">FK</span></td>
+                                            <td><span class="badge-pill badge-sim">SIM</span></td>
+                                            <td>Chave estrangeira para Funcionário</td>
+                                        </tr>
+                                        <tr>
+                                            <td><strong>Nome_USU</strong></td>
+                                            <td>NVARCHAR</td>
+                                            <td>150</td>
+                                            <td>-</td>
+                                            <td><span class="badge-pill badge-sim">SIM</span></td>
+                                            <td>Nome completo do usuário</td>
+                                        </tr>
+                                        <tr>
+                                            <td><strong>Login_USU</strong></td>
+                                            <td>NVARCHAR</td>
+                                            <td>150</td>
+                                            <td>-</td>
+                                            <td><span class="badge-pill badge-sim">SIM</span></td>
+                                            <td>Login de acesso</td>
+                                        </tr>
+                                        <tr>
+                                            <td><strong>Email_USU</strong></td>
+                                            <td>NVARCHAR</td>
+                                            <td>150</td>
+                                            <td>-</td>
+                                            <td><span class="badge-pill badge-sim">SIM</span></td>
+                                            <td>E-mail do usuário</td>
+                                        </tr>
+                                        <tr>
+                                            <td><strong>SenhaHash_USU</strong></td>
+                                            <td>NVARCHAR</td>
+                                            <td>255</td>
+                                            <td>-</td>
+                                            <td><span class="badge-pill badge-sim">SIM</span></td>
+                                            <td>Hash da senha</td>
+                                        </tr>
+                                        <tr>
+                                            <td><strong>Tipo_USU</strong></td>
+                                            <td>CHAR</td>
+                                            <td>3</td>
+                                            <td>-</td>
+                                            <td><span class="badge-pill badge-nao">NÃO</span></td>
+                                            <td>Tipo do usuário (ADM, TEC...)</td>
+                                        </tr>
+                                        <tr>
+                                            <td><strong>Descricao_Tipo_USU</strong></td>
+                                            <td>NVARCHAR</td>
+                                            <td>50</td>
+                                            <td>-</td>
+                                            <td><span class="badge-pill badge-nao">NÃO</span></td>
+                                            <td>Descrição do tipo de usuário</td>
+                                        </tr>
+                                        <tr>
+                                            <td><strong>Ativo_USU</strong></td>
+                                            <td>CHAR</td>
+                                            <td>1</td>
+                                            <td>-</td>
+                                            <td><span class="badge-pill badge-nao">NÃO</span></td>
+                                            <td>Situação do usuário</td>
+                                        </tr>
+                                        <tr>
+                                            <td><strong>UsuInc_USU</strong></td>
+                                            <td>NVARCHAR</td>
+                                            <td>150</td>
+                                            <td>-</td>
+                                            <td><span class="badge-pill badge-nao">NÃO</span></td>
+                                            <td>Usuário inclusão</td>
+                                        </tr>
+                                        <tr>
+                                            <td><strong>UsuAlt_USU</strong></td>
+                                            <td>NVARCHAR</td>
+                                            <td>150</td>
+                                            <td>-</td>
+                                            <td><span class="badge-pill badge-nao">NÃO</span></td>
+                                            <td>Usuário alteração</td>
+                                        </tr>
+                                        <tr>
+                                            <td><strong>DataInc_USU</strong></td>
+                                            <td>DATETIME</td>
+                                            <td>-</td>
+                                            <td>-</td>
+                                            <td><span class="badge-pill badge-sim">SIM</span></td>
+                                            <td>Data de inclusão</td>
+                                        </tr>
+                                        <tr>
+                                            <td><strong>DataUltimoLogin_USU</strong></td>
+                                            <td>DATETIME</td>
+                                            <td>-</td>
+                                            <td>-</td>
+                                            <td><span class="badge-pill badge-nao">NÃO</span></td>
+                                            <td>Último login</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="card shadow-sm mb-4">
+                        <div class="card-header text-white fw-semibold" style="background:var(--accent)">8.12 — ENTIDADE: LogSistema</div>
+                        <div class="card-body p-0">
+
+                            <div class="table-responsive">
+                                <table class="table table-der table-sm table-hover table-bordered mb-0 align-middle">
+                                    <thead>
+                                        <tr>
+                                            <th>ATRIBUTO</th>
+                                            <th>TIPO</th>
+                                            <th>TAMANHO</th>
+                                            <th>ÍNDICE</th>
+                                            <th>OBRIGATÓRIO</th>
+                                            <th>DESCRIÇÃO</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td><strong>ID_LogSistema</strong></td>
+                                            <td>INT</td>
+                                            <td>-</td>
+                                            <td><span class="badge-pill badge-pk">PK</span></td>
+                                            <td><span class="badge-pill badge-sim">SIM</span></td>
+                                            <td>Identificador do log</td>
+                                        </tr>
+                                        <tr>
+                                            <td><strong>Tabela_LOG</strong></td>
+                                            <td>NVARCHAR</td>
+                                            <td>50</td>
+                                            <td>-</td>
+                                            <td><span class="badge-pill badge-sim">SIM</span></td>
+                                            <td>Nome da tabela alterada</td>
+                                        </tr>
+                                        <tr>
+                                            <td><strong>ID_Registro_LOG</strong></td>
+                                            <td>INT</td>
+                                            <td>-</td>
+                                            <td>-</td>
+                                            <td><span class="badge-pill badge-sim">SIM</span></td>
+                                            <td>ID do registro alterado</td>
+                                        </tr>
+                                        <tr>
+                                            <td><strong>Operacao_LOG</strong></td>
+                                            <td>CHAR</td>
+                                            <td>1</td>
+                                            <td>-</td>
+                                            <td><span class="badge-pill badge-sim">SIM</span></td>
+                                            <td>I=Inserido, A=Alterado, D=Deletado</td>
+                                        </tr>
+                                        <tr>
+                                            <td><strong>Campo_Alterado_LOG</strong></td>
+                                            <td>NVARCHAR</td>
+                                            <td>100</td>
+                                            <td>-</td>
+                                            <td><span class="badge-pill badge-nao">NÃO</span></td>
+                                            <td>Campo alterado</td>
+                                        </tr>
+                                        <tr>
+                                            <td><strong>Valor_Anterior_LOG</strong></td>
+                                            <td>NVARCHAR</td>
+                                            <td>500</td>
+                                            <td>-</td>
+                                            <td><span class="badge-pill badge-nao">NÃO</span></td>
+                                            <td>Valor anterior</td>
+                                        </tr>
+                                        <tr>
+                                            <td><strong>Valor_Novo_LOG</strong></td>
+                                            <td>NVARCHAR</td>
+                                            <td>500</td>
+                                            <td>-</td>
+                                            <td><span class="badge-pill badge-nao">NÃO</span></td>
+                                            <td>Novo valor</td>
+                                        </tr>
+                                        <tr>
+                                            <td><strong>ID_Usuario_LOG</strong></td>
+                                            <td>INT</td>
+                                            <td>-</td>
+                                            <td><span class="badge-pill badge-fk">FK</span></td>
+                                            <td><span class="badge-pill badge-nao">NÃO</span></td>
+                                            <td>Usuário que executou a operação</td>
+                                        </tr>
+                                        <tr>
+                                            <td><strong>Data_LOG</strong></td>
+                                            <td>DATETIME</td>
+                                            <td>7</td>
+                                            <td>-</td>
+                                            <td><span class="badge-pill badge-sim">SIM</span></td>
+                                            <td>Data e hora da operação</td>
+                                        </tr>
+                                        <tr>
+                                            <td><strong>IP_Usuario_LOG</strong></td>
+                                            <td>NVARCHAR</td>
+                                            <td>45</td>
+                                            <td>-</td>
+                                            <td><span class="badge-pill badge-nao">NÃO</span></td>
+                                            <td>Endereço IP do usuário</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+
+                    <h2 class="mt-4"><i class="fa-solid fa-list-alt text-accent me-2"></i> 9. Descrição das Entidades do DER</h2>
+                    <div class="entity-grid">
+                        <div class="entity-card">
+                            <h5><i class="fa-solid fa-mobile-screen-button text-accent"></i> Aparelho</h5>
+                            <p>Armazena informações sobre os diferentes tipos de aparelhos (smartphones ou tablets) que podem ser atendidos pela assistência técnica. Serve como um catálogo de dispositivos para padronizar o cadastro nas ordens de serviço.</p>
+                        </div>
+                        <div class="entity-card">
+                            <h5><i class="fa-solid fa-user text-accent"></i> Cliente</h5>
+                            <p>Centraliza todas as informações dos clientes da assistência técnica, permitindo dois tipos de cadastro: simples (apenas dados essenciais) ou completo (dados detalhados para faturamento e controle).</p>
+                        </div>
+                        <div class="entity-card">
+                            <h5><i class="fa-solid fa-wallet text-accent"></i> Financeiro_FP</h5>
+                            <p>Define e padroniza as formas de pagamento aceitas pela assistência técnica, como dinheiro, cartão de débito, cartão de crédito e PIX. Facilita relatórios de recebimentos por modalidade.</p>
+                        </div>
+                        <div class="entity-card">
+                            <h5><i class="fa-solid fa-user-gear text-accent"></i> Funcionario</h5>
+                            <p>Cadastra todos os colaboradores da assistência técnica, incluindo informações pessoais, profissionais e status de atividade. Permite atribuição de responsabilidades e rastreabilidade.</p>
+                        </div>
+                        <div class="entity-card">
+                            <h5><i class="fa-solid fa-layer-group text-accent"></i> GrupoProduto</h5>
+                            <p>Organiza os produtos em categorias lógicas (ex.: “Telas”, “Baterias”, “Acessórios”), facilitando a gestão do estoque e a localização de itens.</p>
+                        </div>
+                        <div class="entity-card">
+                            <h5><i class="fa-solid fa-file-lines text-accent"></i> OrdemServico</h5>
+                            <p>Entidade central do sistema, representando cada atendimento realizado. Coordena todas as atividades do negócio, integrando cliente, aparelho, funcionários, produtos utilizados e controle financeiro.</p>
+                        </div>
+                        <div class="entity-card">
+                            <h5><i class="fa-solid fa-credit-card text-accent"></i> OS_Forma_PG</h5>
+                            <p>Registra as formas de pagamento utilizadas em cada ordem de serviço, permitindo pagamentos múltiplos (ex.: parte em dinheiro, parte no cartão).</p>
+                        </div>
+                        <div class="entity-card">
+                            <h5><i class="fa-solid fa-box text-accent"></i> Produto</h5>
+                            <p>Representa todos os produtos comercializados pela assistência técnica. Gerencia o estoque completo, controla preços de compra e venda, e integra automaticamente com as ordens de serviço.</p>
+                        </div>
+                        <div class="entity-card">
+                            <h5><i class="fa-solid fa-link text-accent"></i> Produto_OS</h5>
+                            <p>Entidade associativa que registra quais produtos foram utilizados em cada ordem de serviço, incluindo quantidades, valores e observações específicas.</p>
+                        </div>
+                        <div class="entity-card">
+                            <h5><i class="fa-solid fa-ruler-combined text-accent"></i> Unidade</h5>
+                            <p>Padroniza as unidades de medida utilizadas no controle de estoque (peça, caixa, metro, etc.), garantindo consistência nos cadastros de produtos.</p>
+                        </div>
+                        <div class="entity-card">
+                            <h5><i class="fa-solid fa-user-shield text-accent"></i> Usuario</h5>
+                            <p>Gerencia o acesso ao sistema, vinculando funcionários aos seus perfis de usuário com diferentes níveis de permissão e controle de segurança.</p>
+                        </div>
+                        <div class="entity-card">
+                            <h5><i class="fa-solid fa-clipboard-list text-accent"></i> LogSistema</h5>
+                            <p>Armazena registros detalhados de todas as ações executadas no sistema. Permite rastreamento completo das atividades, garantindo transparência e segurança.</p>
+                        </div>
+                    </div>
+                    <div class="entity-footer mt-3">
+                        <div class="item"><i class="fa-solid fa-database text-accent"></i> <strong>Total de Entidades:</strong> 12</div>
+                        <div class="item"><i class="fa-solid fa-key text-accent"></i> <strong>Chaves Primárias:</strong> 12</div>
+                        <div class="item"><i class="fa-solid fa-diagram-project text-accent"></i> <strong>Relacionamentos:</strong> Múltiplos</div>
+                        <p class="mt-2 mb-0">O banco de dados foi projetado seguindo boas práticas de normalização, garantindo integridade referencial e performance.</p>
+                    </div>
+
+                    <div class="nav-steps">
+                        <a class="step-pill" href="requisitos.html">
+                            <span class="step-title"><i class="fa-solid fa-arrow-left-long me-2"></i>Anterior</span>
+                            <span class="step-sub">Requisitos do Sistema</span>
+                        </a>
+                        <a class="step-pill" href="diagramas.html">
+                            <span class="step-title">Próximo<i class="fa-solid fa-arrow-right-long ms-2"></i></span>
+                            <span class="step-sub">Diagramas</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <footer class="text-center text-muted py-4 footer-min">
+        <div class="container small">GS CELL — TCC | Gheizla Santos</div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
